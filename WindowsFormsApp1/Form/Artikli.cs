@@ -79,6 +79,12 @@ namespace WindowsFormsApp1
             panel1.Controls.Add(s);
         }
 
-       
+        private void računToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Racun s = new Racun();
+            s.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(s);
+        }
     }
 }

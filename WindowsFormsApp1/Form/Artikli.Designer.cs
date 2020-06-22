@@ -39,8 +39,8 @@
             this.hemikalijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćniArtikliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informaciojeOZaposlenimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.računToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +101,7 @@
             this.prirodnaToolStripMenuItem,
             this.veštačkaToolStripMenuItem});
             this.djubrivaToolStripMenuItem.Name = "djubrivaToolStripMenuItem";
-            this.djubrivaToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.djubrivaToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
             this.djubrivaToolStripMenuItem.Text = "Djubriva";
             // 
             // prirodnaToolStripMenuItem
@@ -121,14 +121,14 @@
             // semenaToolStripMenuItem
             // 
             this.semenaToolStripMenuItem.Name = "semenaToolStripMenuItem";
-            this.semenaToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.semenaToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
             this.semenaToolStripMenuItem.Text = "Semena";
             this.semenaToolStripMenuItem.Click += new System.EventHandler(this.semenaToolStripMenuItem_Click);
             // 
             // hemikalijeToolStripMenuItem
             // 
             this.hemikalijeToolStripMenuItem.Name = "hemikalijeToolStripMenuItem";
-            this.hemikalijeToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.hemikalijeToolStripMenuItem.Size = new System.Drawing.Size(186, 30);
             this.hemikalijeToolStripMenuItem.Text = "Hemikalije";
             this.hemikalijeToolStripMenuItem.Click += new System.EventHandler(this.hemikalijeToolStripMenuItem_Click);
             // 
@@ -150,6 +150,15 @@
             this.informaciojeOZaposlenimaToolStripMenuItem.Text = "Informacioje o zaposlenima";
             this.informaciojeOZaposlenimaToolStripMenuItem.Click += new System.EventHandler(this.informaciojeOZaposlenimaToolStripMenuItem_Click);
             // 
+            // računToolStripMenuItem
+            // 
+            this.računToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.računToolStripMenuItem.Name = "računToolStripMenuItem";
+            this.računToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
+            this.računToolStripMenuItem.Size = new System.Drawing.Size(244, 69);
+            this.računToolStripMenuItem.Text = "Račun";
+            this.računToolStripMenuItem.Click += new System.EventHandler(this.računToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.rasadjivanje_biljke_u_zemlju;
@@ -159,14 +168,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // računToolStripMenuItem
-            // 
-            this.računToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.računToolStripMenuItem.Name = "računToolStripMenuItem";
-            this.računToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 20, 0, 20);
-            this.računToolStripMenuItem.Size = new System.Drawing.Size(244, 69);
-            this.računToolStripMenuItem.Text = "Račun";
             // 
             // Artikli
             // 
