@@ -76,7 +76,12 @@ namespace WindowsFormsApp1
             }
         }
 
-        public INarudzbinaRepository Narudzbinaa => throw new NotImplementedException();
+        public INarudzbinaRepository Narudzbinaa {
+            get {
+                return narudzbinaa ?? (narudzbinaa = new NarudzbinaRepository(context));
+            }
+        
+        }
 
         public IPomocniArtikalRepository PomocniArtikall {
             get {

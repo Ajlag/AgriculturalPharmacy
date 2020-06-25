@@ -14,11 +14,16 @@ namespace WindowsFormsApp1
     {
         private DBPoljoprivrednaApoteka context;
         private UnitOfWork unit;
-        public ZaposleniUC()
+        public ZaposleniUC() 
         {
             InitializeComponent();
             context = new DBPoljoprivrednaApoteka();
             unit = new UnitOfWork(context);
+            var zaposleni = this.unit.Zaposlenii.GetAllZaposlenis();
+            foreach (var z in zaposleni)
+            {
+                dataGridView1.DataSource = zaposleni;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,6 +63,14 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Greska");
                 }
             }
+        }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 1 && e.Value != null) {
+
+                e.Value = new string('*', e.Value.ToString().Length);
+            } 
         }
     }
 }

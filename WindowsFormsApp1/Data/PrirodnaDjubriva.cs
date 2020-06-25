@@ -16,23 +16,11 @@ namespace WindowsFormsApp1
         public int barKod { get; set; }
         public int dostupno { get; set; }
      //   public ICollection<TipZemljista> TipZemljistas { get; set; }
-        public PrirodnaDjubriva(string naziv, string proizvodjac, float cena, string tipzemljista, DateTime datumproizvodnje, int barkod) {
-            naziv = naziv;
-            proizvodjac = proizvodjac;
-            cena = cena;
-            TipZemljista = tipzemljista;
-            datumProizvodnje = datumproizvodnje;
-            barKod = barkod;
-
-        
-        }
+     
         public override string ToString()
         {
             return naziv + " " + cena;
         }
-        public PrirodnaDjubriva() {
-
-            //TipZemljistas = new List<TipZemljista>();
-        }
+        
     }
 }

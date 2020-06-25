@@ -35,11 +35,18 @@ namespace WindowsFormsApp1
             {
                 comboBox1.Items.Add(tz.naziv.ToString());
             }
+
+            var prirodnadju = this.unit.PrirodnaDjubrivaa.GetAllPrirodnaDjubrivas();
+            foreach (var pdj in prirodnadju)
+            {
+                dataGridView1.DataSource = prirodnadju;
+            }
+            dataGridView1.Update();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             if (textBox1.Text == "" || textBox2.Text == "" || comboBox1.Text == "" || comboBox2.Text == "" || dateTimePicker2.Text == "")
             {
                 MessageBox.Show("Morate popuniti sva polja!");
@@ -55,7 +62,7 @@ namespace WindowsFormsApp1
                             naziv = textBox1.Text,
                             cena = int.Parse(textBox2.Text),
                             // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
-                           
+
                             datumProizvodnje = dateTimePicker2.Value,
                             proizvodjac = comboBox2.Text,
                             TipZemljista = comboBox1.Text
@@ -75,8 +82,27 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Greska");
                 }
             }
+            dataGridView1.Update();
         }
 
-        
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                string naziv = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                string datumpro = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
+                string proizvodjac = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string cena = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                string tipzemljista = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+
+                textBox1.Text = naziv;
+                dateTimePicker2.Value = DateTime.Parse(datumpro);
+                comboBox1.Text = tipzemljista;
+                comboBox2.Text = proizvodjac;
+                textBox2.Text = cena;
+            }
+        }
     }
 }

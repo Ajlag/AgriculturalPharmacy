@@ -19,6 +19,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
             context = new DBPoljoprivrednaApoteka();
             unit = new UnitOfWork(context);
+
+            var semena = this.unit.Semenaa.GetAllSemena();
+            foreach (var s in semena)
+            {
+                dataGridView1.DataSource = semena;
+            }
+
             var proizvodjac = this.unit.Proizvodjacc.GetAllProizvodjac();//prikazati naziv proizvodjaca u combobox
             comboBox2.Items.Clear();
             foreach (var p in proizvodjac)
@@ -69,6 +76,25 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Greska");
                 }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                string naziv = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                string datumpro = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+                string proizvodjac = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string cena = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                string tipzemljista = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
+
+                textBox1.Text = naziv;
+               dateTimePicker2.Value = DateTime.Parse(datumpro);
+                comboBox1.Text = tipzemljista;
+                comboBox2.Text = proizvodjac;
+                textBox2.Text = cena;
             }
         }
     }

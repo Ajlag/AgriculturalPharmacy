@@ -31,6 +31,12 @@ namespace WindowsFormsApp1
             {
                 comboBox1.Items.Add(tz.naziv.ToString());
             }
+
+            var vestackadju = this.unit.VestackaDjubrivaa.GetAllVestackaDjubrivas();
+            foreach (var vdj in vestackadju)
+            {
+                dataGridView1.DataSource = vestackadju;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +76,27 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Greska");
                 }
+
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                string naziv = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                string datumpro = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
+                string proizvodjac = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string cena = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                string tipzemljista = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+
+                textBox1.Text = naziv;
+                dateTimePicker2.Value = DateTime.Parse(datumpro);
+                comboBox1.Text = tipzemljista;
+                comboBox2.Text = proizvodjac;
+                textBox2.Text = cena;
+
 
             }
         }

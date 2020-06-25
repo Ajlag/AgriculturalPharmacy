@@ -25,6 +25,14 @@ namespace WindowsFormsApp1
             {
                 comboBox2.Items.Add(p.naziv.ToString());
             }
+
+
+            var pomocniartikli = this.unit.PomocniArtikall.GetAllPomocniArtikals();
+            foreach (var a in pomocniartikli)
+            {
+                dataGridView1.DataSource = pomocniartikli;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +56,33 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Doslo je do greske, proverite unete podatke");
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+
+                string naziv = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                string datumpro = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+                string proizvodjac = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string cena = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+             
+
+                textBox1.Text = naziv;
+                dateTimePicker2.Value = DateTime.Parse(datumpro);
+               
+                comboBox2.Text = proizvodjac;
+                textBox2.Text = cena;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            comboBox2.Text = "";
+            dateTimePicker2.Value = DateTime.Today;
         }
     }
 }

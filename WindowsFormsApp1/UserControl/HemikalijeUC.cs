@@ -20,11 +20,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
             context = new DBPoljoprivrednaApoteka();
             unit = new UnitOfWork(context);
-            //var hemikalije = this.unit.Hemikalijee.GetAllHemikalijes();
-       //     foreach (var h in hemikalije)
-         //   {
-           //     dataGridView1.DataSource=h.ToString();
-            //}
+            var hemikalije = this.unit.Hemikalijee.GetAllHemikalijes();
+         foreach (var h in hemikalije)
+           {
+                dataGridView1.DataSource=hemikalije;
+            }
 
             var tipzemljista = this.unit.TipZemljistaa.GetAllTipZemljistas();
             comboBox1.Items.Clear();
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
                    // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
                     stepenOtrovnosti = textBox4.Text,
                     datumProizvodnje = dateTimePicker2.Value,
-                    proizvodjac = textBox5.Text,
+                    proizvodjac = comboBox2.Text,
                     TipZemljista= comboBox1.Text
 
                 };
@@ -64,18 +64,39 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            string odabrana = dataGridView1.SelectedRows.ToString();
-            var deli = odabrana.Split(' ');
-            int cena = int.Parse(deli[1]);
+           // string odabrana = dataGridView1.SelectedRows.ToString();
+            //var deli = odabrana.Split(' ');
+            //int cena = int.Parse(deli[1]);
            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var hemikalije = this.unit.Hemikalijee.GetAllHemikalijes();
-            foreach (var h in hemikalije)
+          //  var hemikalije = this.unit.Hemikalijee.GetAllHemikalijes();
+           // foreach (var h in hemikalije)
+            //{
+              //  dataGridView1.DataSource = h.ToString();
+            //}
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
             {
-                dataGridView1.DataSource = h.ToString();
+
+                string naziv = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                string datumpro = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
+                string proizvodjac = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
+                string cena = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
+                string tipzemljista = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
+                string stepenotrovnosti = dataGridView1.SelectedRows[0].Cells[5].Value + string.Empty;
+
+                textBox1.Text = naziv;
+              dateTimePicker2.Value = DateTime.Parse(datumpro);
+                comboBox1.Text = tipzemljista;
+                comboBox2.Text = proizvodjac;
+                textBox2.Text = cena;
+                textBox4.Text = stepenotrovnosti;
             }
         }
     }
