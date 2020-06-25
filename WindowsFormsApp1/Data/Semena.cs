@@ -15,6 +15,10 @@ namespace WindowsFormsApp1
         public string TipZemljista { get; set; }
         public int barKod { get; set; }
         public int dostupno { get; set; }
+        public override string ToString()
+        {
+            return naziv + " " + cena;
+        }
 
     } 
 }

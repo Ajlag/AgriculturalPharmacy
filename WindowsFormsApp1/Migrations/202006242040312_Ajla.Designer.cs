@@ -7,13 +7,13 @@ namespace WindowsFormsApp1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class KreirajPrvo : IMigrationMetadata
+    public sealed partial class Ajla : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(KreirajPrvo));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Ajla));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006171144365_KreirajPrvo"; }
+            get { return "202006242040312_Ajla"; }
         }
         
         string IMigrationMetadata.Source

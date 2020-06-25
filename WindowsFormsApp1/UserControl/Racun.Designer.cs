@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmb_artikal = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -57,21 +56,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_balans = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(30, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(702, 70);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // cmb_artikal
             // 
             this.cmb_artikal.FormattingEnabled = true;
-            this.cmb_artikal.Location = new System.Drawing.Point(184, 143);
+            this.cmb_artikal.Location = new System.Drawing.Point(180, 65);
             this.cmb_artikal.Name = "cmb_artikal";
             this.cmb_artikal.Size = new System.Drawing.Size(403, 24);
             this.cmb_artikal.TabIndex = 1;
@@ -80,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 150);
+            this.label1.Location = new System.Drawing.Point(77, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 2;
@@ -89,19 +82,19 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(72, 110);
+            this.radioButton1.Location = new System.Drawing.Point(68, 32);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 21);
+            this.radioButton1.Size = new System.Drawing.Size(137, 21);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Djubriva";
+            this.radioButton1.Text = "Prirodna djubriva";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(184, 110);
+            this.radioButton2.Location = new System.Drawing.Point(351, 32);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(81, 21);
             this.radioButton2.TabIndex = 4;
@@ -113,7 +106,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(298, 110);
+            this.radioButton3.Location = new System.Drawing.Point(459, 32);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(93, 21);
             this.radioButton3.TabIndex = 5;
@@ -124,7 +117,7 @@
             // 
             // txt_cena
             // 
-            this.txt_cena.Location = new System.Drawing.Point(41, 203);
+            this.txt_cena.Location = new System.Drawing.Point(41, 153);
             this.txt_cena.Name = "txt_cena";
             this.txt_cena.Size = new System.Drawing.Size(100, 22);
             this.txt_cena.TabIndex = 6;
@@ -134,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 183);
+            this.label2.Location = new System.Drawing.Point(69, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 7;
@@ -143,7 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(255, 183);
+            this.label3.Location = new System.Drawing.Point(255, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 9;
@@ -151,17 +144,18 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(227, 203);
+            this.textBox2.Location = new System.Drawing.Point(227, 153);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 8;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.TabStopChanged += new System.EventHandler(this.textBox2_TabStopChanged);
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(444, 183);
+            this.label4.Location = new System.Drawing.Point(444, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 17);
             this.label4.TabIndex = 11;
@@ -169,7 +163,7 @@
             // 
             // txt_ukupno1
             // 
-            this.txt_ukupno1.Location = new System.Drawing.Point(416, 203);
+            this.txt_ukupno1.Location = new System.Drawing.Point(416, 153);
             this.txt_ukupno1.Name = "txt_ukupno1";
             this.txt_ukupno1.Size = new System.Drawing.Size(100, 22);
             this.txt_ukupno1.TabIndex = 10;
@@ -177,7 +171,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(561, 191);
+            this.button1.Location = new System.Drawing.Point(557, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 34);
             this.button1.TabIndex = 12;
@@ -187,6 +181,7 @@
             // 
             // listView1
             // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -223,7 +218,7 @@
             // 
             // txt_ukupno
             // 
-            this.txt_ukupno.Location = new System.Drawing.Point(111, 478);
+            this.txt_ukupno.Location = new System.Drawing.Point(135, 478);
             this.txt_ukupno.Name = "txt_ukupno";
             this.txt_ukupno.Size = new System.Drawing.Size(100, 22);
             this.txt_ukupno.TabIndex = 14;
@@ -297,9 +292,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(478, 557);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 17);
+            this.label9.Size = new System.Drawing.Size(45, 17);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Balans";
+            this.label9.Text = "Kusur";
             // 
             // txt_balans
             // 
@@ -311,18 +306,54 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(561, 231);
+            this.button2.Location = new System.Drawing.Point(557, 206);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 25);
+            this.button2.Size = new System.Drawing.Size(125, 40);
             this.button2.TabIndex = 24;
             this.button2.Text = "Ukloni stavku";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(594, 32);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(125, 21);
+            this.radioButton4.TabIndex = 25;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Pomocni artikal";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(204, 32);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(141, 21);
+            this.radioButton5.TabIndex = 26;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Vestacka djubriva";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(312, 545);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 40);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "Štampaj račun";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Racun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.radioButton5);
+            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_balans);
@@ -347,18 +378,15 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmb_artikal);
-            this.Controls.Add(this.pictureBox1);
+            this.MinimumSize = new System.Drawing.Size(786, 609);
             this.Name = "Racun";
             this.Size = new System.Drawing.Size(786, 609);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmb_artikal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -387,5 +415,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.Button button3;
     }
 }

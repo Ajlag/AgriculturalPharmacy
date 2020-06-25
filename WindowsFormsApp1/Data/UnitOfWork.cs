@@ -78,7 +78,11 @@ namespace WindowsFormsApp1
 
         public INarudzbinaRepository Narudzbinaa => throw new NotImplementedException();
 
-        public IPomocniArtikalRepository PomocniArtikall => throw new NotImplementedException();
+        public IPomocniArtikalRepository PomocniArtikall {
+            get {
+                return pomocniartikall ?? (pomocniartikall = new PomocniArtikliRepository(context));
+            }
+        }
 
         public void Complete()
         {

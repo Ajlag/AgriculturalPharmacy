@@ -180,6 +180,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1085, 701);
             this.Name = "Artikli";
             this.Text = "Artikli";
             this.menuStrip1.ResumeLayout(false);

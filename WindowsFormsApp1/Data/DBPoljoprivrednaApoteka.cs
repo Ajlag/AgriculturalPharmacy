@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Zaposleni>().HasKey(z => z.KorisnickoIme);
-            modelBuilder.Entity<Zaposleni>().Property(z => z.ime).IsRequired().HasMaxLength(15);
+            modelBuilder.Entity<Zaposleni>().Property(z => z.ime).IsRequired().HasMaxLength(20);
             modelBuilder.Entity<Zaposleni>().Property(z => z.prezime).IsRequired().HasMaxLength(20);
             modelBuilder.Entity<Zaposleni>().Property(z => z.datumRodjenja).IsRequired();
             modelBuilder.Entity<Zaposleni>().Property(z => z.lozinka).IsRequired();
@@ -74,6 +74,8 @@ namespace WindowsFormsApp1
             modelBuilder.Entity<Hemikalije>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<Hemikalije>().Property(z => z.cena).IsRequired();
             modelBuilder.Entity<Hemikalije>().Property(z => z.dostupno).IsRequired();
+           // modelBuilder.Entity<TipZemljista>().WithMany(d => d.TipZemljista).HasForeignKey(bd => bd.naziv);
+
         }
 
 

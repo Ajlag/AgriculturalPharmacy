@@ -13,10 +13,13 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         private DBPoljoprivrednaApoteka context;
+        private UnitOfWork unit;
 
         public Form1()
         {
             InitializeComponent();
+             context = new DBPoljoprivrednaApoteka();
+            unit = new UnitOfWork(context);
         }
 
       
@@ -34,8 +37,7 @@ namespace WindowsFormsApp1
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            UnitOfWork unit = new UnitOfWork(context);
+        { 
             var korisnicko = textBox1.Text;
             var lozinka = textBox2.Text;
             string allowedchar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -51,11 +53,13 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Proverite lozinku");
                 }
-                else if (unit.Zaposlenii.CombinationExists(korisnicko, lozinka) == true)
+                else if (this.unit.Zaposlenii.CombinationExists(korisnicko, lozinka) == true)
                 {
-                    this.Hide();
-                    Artikli f = new Artikli();
-                    f.Show();
+                   
+                        this.Hide();
+                        Artikli f = new Artikli();
+                        f.Show();
+                    
                 }
                 else
                 {
