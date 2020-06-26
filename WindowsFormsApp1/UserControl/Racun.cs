@@ -162,10 +162,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox2_TabStopChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {

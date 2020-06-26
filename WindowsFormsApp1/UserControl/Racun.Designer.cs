@@ -149,7 +149,6 @@
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 8;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TabStopChanged += new System.EventHandler(this.textBox2_TabStopChanged);
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
@@ -218,6 +217,7 @@
             // 
             // txt_ukupno
             // 
+            this.txt_ukupno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_ukupno.Location = new System.Drawing.Point(135, 478);
             this.txt_ukupno.Name = "txt_ukupno";
             this.txt_ukupno.Size = new System.Drawing.Size(100, 22);
@@ -227,6 +227,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(17, 478);
             this.label5.Name = "label5";
@@ -236,6 +237,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(262, 478);
             this.label6.Name = "label6";
@@ -245,6 +247,7 @@
             // 
             // txt_popust
             // 
+            this.txt_popust.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_popust.Location = new System.Drawing.Point(332, 478);
             this.txt_popust.Name = "txt_popust";
             this.txt_popust.Size = new System.Drawing.Size(100, 22);
@@ -254,6 +257,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(478, 473);
             this.label7.Name = "label7";
@@ -263,6 +267,7 @@
             // 
             // txt_neto
             // 
+            this.txt_neto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_neto.Location = new System.Drawing.Point(572, 473);
             this.txt_neto.Name = "txt_neto";
             this.txt_neto.Size = new System.Drawing.Size(100, 22);
@@ -271,6 +276,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(478, 514);
             this.label8.Name = "label8";
@@ -280,6 +286,7 @@
             // 
             // txt_placeno
             // 
+            this.txt_placeno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_placeno.Location = new System.Drawing.Point(572, 514);
             this.txt_placeno.Name = "txt_placeno";
             this.txt_placeno.Size = new System.Drawing.Size(100, 22);
@@ -289,6 +296,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(478, 557);
             this.label9.Name = "label9";
@@ -298,6 +306,7 @@
             // 
             // txt_balans
             // 
+            this.txt_balans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_balans.Location = new System.Drawing.Point(572, 557);
             this.txt_balans.Name = "txt_balans";
             this.txt_balans.Size = new System.Drawing.Size(100, 22);
@@ -340,6 +349,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.Location = new System.Drawing.Point(312, 545);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 40);
@@ -352,6 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.button3);
             this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.radioButton4);

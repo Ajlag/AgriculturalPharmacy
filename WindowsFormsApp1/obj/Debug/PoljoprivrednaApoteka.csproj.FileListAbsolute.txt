@@ -70,3 +70,4 @@ C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\Wind
 C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.Aco.resources
 C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.Ajla.resources
 C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.UkloniVezu.resources
+C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\bin\Debug\Bunifu_UI_v1.52.dll

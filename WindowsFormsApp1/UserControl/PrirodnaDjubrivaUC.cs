@@ -104,5 +104,46 @@ namespace WindowsFormsApp1
                 textBox2.Text = cena;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "" || comboBox1.Text == "" || comboBox2.Text == "" || dateTimePicker2.Text == "")
+            {
+                MessageBox.Show("Morate popuniti sva polja!");
+            }
+            else
+            {
+                try
+                {
+                    try
+                    {
+                        var stari = new PrirodnaDjubriva
+                        {
+                            naziv = textBox1.Text,
+                            cena = int.Parse(textBox2.Text),
+                            // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
+
+                            datumProizvodnje = dateTimePicker2.Value,
+                            proizvodjac = comboBox2.Text,
+                            TipZemljista = comboBox1.Text
+
+                        };
+                        this.unit.PrirodnaDjubrivaa.DeletePrirodnaDjubriva(stari);
+                        this.unit.Complete();
+                        MessageBox.Show("Dodali ste nova djubriva.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Doslo je do greske, proverite unete podatke");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Greska");
+                }
+            }
+        }
+
+        
     }
 }

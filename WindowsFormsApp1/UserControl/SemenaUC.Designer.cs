@@ -36,11 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,27 +110,12 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Naziv";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(236, 248);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 49);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Ukloni";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(64, 245);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 54);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Dodaj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -156,10 +142,48 @@
             this.comboBox1.Size = new System.Drawing.Size(230, 24);
             this.comboBox1.TabIndex = 33;
             // 
+            // button3
+            // 
+            this.button3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_clean_26;
+            this.button3.Location = new System.Drawing.Point(494, 245);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 38);
+            this.button3.TabIndex = 40;
+            this.button3.Text = "Očisti";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_remove_26__1_;
+            this.button2.Location = new System.Drawing.Point(315, 245);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 38);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Ukloni";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_add_column_26;
+            this.button1.Location = new System.Drawing.Point(114, 245);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 38);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Dodaj";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SemenaUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
@@ -170,8 +194,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "SemenaUC";
             this.Size = new System.Drawing.Size(825, 543);
@@ -190,10 +212,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

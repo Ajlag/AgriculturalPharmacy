@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Bunifu Framework Manager 1.52 x86 x64\Bunifu Framework Manager 1.52 x86 x64\Crack\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -45,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -213,10 +217,88 @@
     <None Include="Resources\icon-poljoprivreda.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\whimsy-design-flowers-6352928.jpg" />
+    <None Include="Resources\annie-spratt-wuc-KEIBrdE-unsplash %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rasadjivanje-biljke-u-zemlju.jpg" />
+    <None Include="Resources\500_F_329057071_kvonVltY6cMpKHIgdTdVZY9VnoSNSNN2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee-363-641794.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gender-neutral-employee-group-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ingredients-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gender-neutral-employee-group-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-experiment-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-flax-seeds-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-artificial-intelligence-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-shutdown-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circled-x-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-column-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-column-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-26 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clean-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-x-men-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximize-window-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-30 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forgot-password-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

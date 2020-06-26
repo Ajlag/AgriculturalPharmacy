@@ -18,48 +18,19 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void semenaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           SemenaUC s = new SemenaUC();
-            s.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(s);
-        }
+    
 
-        private void hemikalijeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            HemikalijeUC h = new HemikalijeUC();
-            h.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(h);
+    
+      
+       
+      
+       
 
-        }
+     
 
-        private void prirodnaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PrirodnaDjubrivaUC p = new PrirodnaDjubrivaUC();
-            p.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(p);
-        }
+      
 
-        private void veštačkaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            VestackaDjubrivaUC v = new VestackaDjubrivaUC();
-            v.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(v);
-        }
-
-        private void pomoćniArtikliToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PomocniArtikliUC s = new PomocniArtikliUC();
-            s.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(s);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             DialogResult Izlaz;
             Izlaz = MessageBox.Show("Da li zelite da se odjavite?", "Izlaz", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -71,7 +42,67 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void informaciojeOZaposlenimaToolStripMenuItem_Click(object sender, EventArgs e)
+       
+        
+
+       
+      
+
+        
+
+
+
+        
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            PrirodnaDjubrivaUC p = new PrirodnaDjubrivaUC();
+            p.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(p);
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            VestackaDjubrivaUC v = new VestackaDjubrivaUC();
+            v.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(v);
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            SemenaUC s = new SemenaUC();
+            s.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(s);
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            HemikalijeUC h = new HemikalijeUC();
+            h.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(h);
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            PomocniArtikliUC s = new PomocniArtikliUC();
+            s.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(s);
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            Racun s = new Racun();
+            s.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(s);
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
             ZaposleniUC s = new ZaposleniUC();
             s.Dock = DockStyle.Fill;
@@ -79,12 +110,36 @@ namespace WindowsFormsApp1
             panel1.Controls.Add(s);
         }
 
-        private void računToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Racun s = new Racun();
-            s.Dock = DockStyle.Fill;
-            panel1.Controls.Clear();
-            panel1.Controls.Add(s);
+            if (Menu.Width == 200)
+            {
+                Menu.Width = 53;
+                panel4.Width = 60;
+
+
+            }
+            else
+            {
+                Menu.Width = 200;
+                panel4.Width = 220;
+            
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
         }
     }
 }

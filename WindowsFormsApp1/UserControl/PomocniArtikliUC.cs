@@ -84,5 +84,7 @@ namespace WindowsFormsApp1
             comboBox2.Text = "";
             dateTimePicker2.Value = DateTime.Today;
         }
+
+        
     }
 }

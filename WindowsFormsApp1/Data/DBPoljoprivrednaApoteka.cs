@@ -34,6 +34,8 @@ namespace WindowsFormsApp1
 
             modelBuilder.Entity<VestackaDjubriva>().HasKey(z => z.barKod);
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
+
+            modelBuilder.Entity<VestackaDjubriva>().Property(z => z.naziv);
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.cena).IsRequired();
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.dostupno).IsRequired();

@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -78,5 +78,20 @@ namespace WindowsFormsApp1
             Artikli f = new Artikli();
             f.Show();
         }
+
+   
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+        }
+
+       
+        
     }
 }

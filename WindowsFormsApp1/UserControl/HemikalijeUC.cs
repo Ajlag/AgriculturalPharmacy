@@ -70,14 +70,7 @@ namespace WindowsFormsApp1
            
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          //  var hemikalije = this.unit.Hemikalijee.GetAllHemikalijes();
-           // foreach (var h in hemikalije)
-            //{
-              //  dataGridView1.DataSource = h.ToString();
-            //}
-        }
+       
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
