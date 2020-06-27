@@ -59,6 +59,10 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CalendarForeColor = System.Drawing.Color.White;
+            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.White;
+            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.SystemColors.Control;
+            this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.dateTimePicker2.Location = new System.Drawing.Point(191, 344);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(183, 22);
@@ -74,6 +78,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(51, 430);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
@@ -83,6 +89,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(51, 390);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 17);
@@ -92,6 +100,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(51, 349);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 17);
@@ -101,6 +111,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(51, 309);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 17);
@@ -110,6 +122,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(415, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 17);
@@ -126,6 +139,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(430, 388);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 17);
@@ -153,7 +167,7 @@
             this.button3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_clean_26;
             this.button3.Location = new System.Drawing.Point(513, 254);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 38);
+            this.button3.Size = new System.Drawing.Size(113, 49);
             this.button3.TabIndex = 37;
             this.button3.Text = "Očisti";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,7 +179,7 @@
             this.button2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_remove_26__1_;
             this.button2.Location = new System.Drawing.Point(330, 254);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 38);
+            this.button2.Size = new System.Drawing.Size(120, 49);
             this.button2.TabIndex = 20;
             this.button2.Text = "Ukloni";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -177,7 +191,7 @@
             this.button1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_add_column_26;
             this.button1.Location = new System.Drawing.Point(129, 254);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 38);
+            this.button1.Size = new System.Drawing.Size(112, 49);
             this.button1.TabIndex = 19;
             this.button1.Text = "Dodaj";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

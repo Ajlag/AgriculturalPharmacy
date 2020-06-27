@@ -107,41 +107,28 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || comboBox1.Text == "" || comboBox2.Text == "" || dateTimePicker2.Text == "")
+            try
             {
-                MessageBox.Show("Morate popuniti sva polja!");
+
+
+
+                DialogResult Brisi;
+                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (Brisi == DialogResult.Yes)
+                {
+                    string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                    var prirodnadjubriva = this.unit.PrirodnaDjubrivaa.GetPrirodnaDjubrivaBybarKod(int.Parse(barKod));
+                    this.unit.PrirodnaDjubrivaa.DeletePrirodnaDjubriva(prirodnadjubriva);
+                    this.unit.Complete();
+                    MessageBox.Show("Izbrisali ste hemikaliju.");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                try
-                {
-                    try
-                    {
-                        var stari = new PrirodnaDjubriva
-                        {
-                            naziv = textBox1.Text,
-                            cena = int.Parse(textBox2.Text),
-                            // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
-
-                            datumProizvodnje = dateTimePicker2.Value,
-                            proizvodjac = comboBox2.Text,
-                            TipZemljista = comboBox1.Text
-
-                        };
-                        this.unit.PrirodnaDjubrivaa.DeletePrirodnaDjubriva(stari);
-                        this.unit.Complete();
-                        MessageBox.Show("Dodali ste nova djubriva.");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Doslo je do greske, proverite unete podatke");
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Greska");
-                }
+                MessageBox.Show("Doslo je do greske, proverite unete podatke");
             }
+
         }
 
         private void button3_Click(object sender, EventArgs e)

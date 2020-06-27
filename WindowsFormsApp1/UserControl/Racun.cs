@@ -210,5 +210,11 @@ namespace WindowsFormsApp1
                 throw new Exception("Exception Occured While Printing", ex);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+
+        }
     }
 }

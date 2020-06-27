@@ -79,5 +79,30 @@ namespace WindowsFormsApp1
             textBox3.Text = "";
             dateTimePicker2.Value = DateTime.Today;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+                DialogResult Brisi;
+                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (Brisi == DialogResult.Yes)
+                {
+                    string korisnickoime = dataGridView1.SelectedRows[0].Cells[0].Value + string.Empty;
+                    var zaposleni = this.unit.Zaposlenii.GetZaposleniByKorisnickoIme(korisnickoime);
+                    this.unit.Zaposlenii.DeleteZaposleni(zaposleni);
+                    this.unit.Complete();
+                    MessageBox.Show("Izbrisali ste hemikaliju.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Doslo je do greske, proverite unete podatke");
+            }
+        }
     }
 }

@@ -106,5 +106,30 @@ namespace WindowsFormsApp1
             comboBox1.Text = "";
             dateTimePicker2.Value = DateTime.Today;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+                DialogResult Brisi;
+                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (Brisi == DialogResult.Yes)
+                {
+                    string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                    var semena = this.unit.Semenaa.GetSemenaBybarKod(int.Parse(barKod));
+                    this.unit.Semenaa.DeleteSemena(semena);
+                    this.unit.Complete();
+                    MessageBox.Show("Izbrisali ste hemikaliju.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Doslo je do greske, proverite unete podatke");
+            }
+        }
     }
 }

@@ -85,6 +85,29 @@ namespace WindowsFormsApp1
             dateTimePicker2.Value = DateTime.Today;
         }
 
-        
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+
+                DialogResult Brisi;
+                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (Brisi == DialogResult.Yes)
+                {
+                    string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                    var pomocniartikal = this.unit.PomocniArtikall.GetPomocniArtikalBybarKod(int.Parse(barKod));
+                    this.unit.PomocniArtikall.DeletePomocniArtikal(pomocniartikal);
+                    this.unit.Complete();
+                    MessageBox.Show("Izbrisali ste hemikaliju.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Doslo je do greske, proverite unete podatke");
+            }
+        }
     }
 }

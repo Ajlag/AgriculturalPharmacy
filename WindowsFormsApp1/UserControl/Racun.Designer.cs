@@ -59,6 +59,7 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmb_artikal
@@ -170,6 +171,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(557, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 34);
@@ -252,12 +254,13 @@
             this.txt_popust.Name = "txt_popust";
             this.txt_popust.Size = new System.Drawing.Size(100, 22);
             this.txt_popust.TabIndex = 16;
+            this.txt_popust.Text = "0";
             this.txt_popust.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_popust.TextChanged += new System.EventHandler(this.txt_popust_TextChanged);
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(478, 473);
             this.label7.Name = "label7";
@@ -267,7 +270,7 @@
             // 
             // txt_neto
             // 
-            this.txt_neto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_neto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_neto.Location = new System.Drawing.Point(572, 473);
             this.txt_neto.Name = "txt_neto";
             this.txt_neto.Size = new System.Drawing.Size(100, 22);
@@ -276,7 +279,7 @@
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(478, 514);
             this.label8.Name = "label8";
@@ -286,7 +289,7 @@
             // 
             // txt_placeno
             // 
-            this.txt_placeno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_placeno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_placeno.Location = new System.Drawing.Point(572, 514);
             this.txt_placeno.Name = "txt_placeno";
             this.txt_placeno.Size = new System.Drawing.Size(100, 22);
@@ -296,7 +299,7 @@
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(478, 557);
             this.label9.Name = "label9";
@@ -306,7 +309,7 @@
             // 
             // txt_balans
             // 
-            this.txt_balans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txt_balans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_balans.Location = new System.Drawing.Point(572, 557);
             this.txt_balans.Name = "txt_balans";
             this.txt_balans.Size = new System.Drawing.Size(100, 22);
@@ -315,6 +318,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(557, 206);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 40);
@@ -358,11 +362,23 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button4.Location = new System.Drawing.Point(161, 545);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(106, 40);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Odustani";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Racun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.radioButton4);
@@ -430,5 +446,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

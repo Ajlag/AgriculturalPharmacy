@@ -83,6 +83,7 @@ namespace WindowsFormsApp1
                 string cena = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
                 string tipzemljista = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
                 string stepenotrovnosti = dataGridView1.SelectedRows[0].Cells[5].Value + string.Empty;
+                
 
                 textBox1.Text = naziv;
               dateTimePicker2.Value = DateTime.Parse(datumpro);
@@ -90,6 +91,7 @@ namespace WindowsFormsApp1
                 comboBox2.Text = proizvodjac;
                 textBox2.Text = cena;
                 textBox4.Text = stepenotrovnosti;
+              
             }
         }
 
@@ -107,19 +109,20 @@ namespace WindowsFormsApp1
         {
             try
             {
-                var staro = new Hemikalije
-                {
-                    naziv = textBox1.Text,
-                    cena = int.Parse(textBox2.Text),
-                    stepenOtrovnosti = textBox4.Text,
-                    datumProizvodnje = dateTimePicker2.Value,
-                    proizvodjac = comboBox2.Text,
-                    TipZemljista = comboBox1.Text
 
-                };
-                this.unit.Hemikalijee.DeleteHemikalije(staro);
+
+
+                DialogResult Brisi;
+                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (Brisi == DialogResult.Yes)
+                {
+                       string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                var hemikalija = this.unit.Hemikalijee.GetHemikalijelBybarKod(int.Parse(barKod));
+                this.unit.Hemikalijee.DeleteHemikalije(hemikalija);
                 this.unit.Complete();
                 MessageBox.Show("Izbrisali ste hemikaliju.");
+                }
+             
             }
             catch (Exception ex)
             {
