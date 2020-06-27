@@ -85,6 +85,22 @@
     <Compile Include="Migrations\202006251106206_UkloniVezu.designer.cs">
       <DependentUpon>202006251106206_UkloniVezu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006262123103_DodajKorisnika.cs" />
+    <Compile Include="Migrations\202006262123103_DodajKorisnika.designer.cs">
+      <DependentUpon>202006262123103_DodajKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006271021325_KreirajUniqueNaziv.cs" />
+    <Compile Include="Migrations\202006271021325_KreirajUniqueNaziv.designer.cs">
+      <DependentUpon>202006271021325_KreirajUniqueNaziv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006271024552_UniqueNazivZaSve.cs" />
+    <Compile Include="Migrations\202006271024552_UniqueNazivZaSve.designer.cs">
+      <DependentUpon>202006271024552_UniqueNazivZaSve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006271229464_SemenaUnique1.cs" />
+    <Compile Include="Migrations\202006271229464_SemenaUnique1.designer.cs">
+      <DependentUpon>202006271229464_SemenaUnique1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,6 +188,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006251106206_UkloniVezu.resx">
       <DependentUpon>202006251106206_UkloniVezu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006262123103_DodajKorisnika.resx">
+      <DependentUpon>202006262123103_DodajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006271021325_KreirajUniqueNaziv.resx">
+      <DependentUpon>202006271021325_KreirajUniqueNaziv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006271024552_UniqueNazivZaSve.resx">
+      <DependentUpon>202006271024552_UniqueNazivZaSve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006271229464_SemenaUnique1.resx">
+      <DependentUpon>202006271229464_SemenaUnique1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Racun.resx">
       <DependentUpon>Racun.cs</DependentUpon>

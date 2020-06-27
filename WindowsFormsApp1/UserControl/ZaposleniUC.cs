@@ -72,5 +72,12 @@ namespace WindowsFormsApp1
                 e.Value = new string('*', e.Value.ToString().Length);
             } 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox3.Text = "";
+            dateTimePicker2.Value = DateTime.Today;
+        }
     }
 }

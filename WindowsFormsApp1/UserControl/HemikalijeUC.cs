@@ -92,5 +92,42 @@ namespace WindowsFormsApp1
                 textBox4.Text = stepenotrovnosti;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            comboBox2.Text = "";
+            comboBox1.Text = "";
+            textBox4.Text = "";
+            dateTimePicker2.Value = DateTime.Today;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var staro = new Hemikalije
+                {
+                    naziv = textBox1.Text,
+                    cena = int.Parse(textBox2.Text),
+                    stepenOtrovnosti = textBox4.Text,
+                    datumProizvodnje = dateTimePicker2.Value,
+                    proizvodjac = comboBox2.Text,
+                    TipZemljista = comboBox1.Text
+
+                };
+                this.unit.Hemikalijee.DeleteHemikalije(staro);
+                this.unit.Complete();
+                MessageBox.Show("Izbrisali ste hemikaliju.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Doslo je do greske, proverite unete podatke");
+            }
+
+        }
+
+       
     }
 }

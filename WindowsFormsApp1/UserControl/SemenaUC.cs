@@ -97,5 +97,14 @@ namespace WindowsFormsApp1
                 textBox2.Text = cena;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            comboBox2.Text = "";
+            comboBox1.Text = "";
+            dateTimePicker2.Value = DateTime.Today;
+        }
     }
 }

@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
             Racun s = new Racun();
             s.Dock = DockStyle.Fill;
             panel1.Controls.Clear();
-            panel1.Controls.Add(s);
+           panel1.Controls.Add(s);
         }
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
@@ -107,22 +107,30 @@ namespace WindowsFormsApp1
             ZaposleniUC s = new ZaposleniUC();
             s.Dock = DockStyle.Fill;
             panel1.Controls.Clear();
-            panel1.Controls.Add(s);
+           panel1.Controls.Add(s);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (Menu.Width == 200)
+            if (Menu.Width == 193)
             {
-                Menu.Width = 53;
-                panel4.Width = 60;
+                Menu.Visible = false;
+                Menu.Width = 50;
+                panel4.Width = 80;
+                AnimationMenu.Show(Menu);
+
+
+                    
+            
 
 
             }
             else
             {
-                Menu.Width = 200;
-                panel4.Width = 220;
+                Menu.Visible = false;
+                Menu.Width = 193;
+                panel4.Width = 217;
+                AnimationMenuBack.Show(Menu);
             
             }
         }
@@ -141,5 +149,7 @@ namespace WindowsFormsApp1
         {
             WindowState = FormWindowState.Maximized;
         }
+
+      
     }
 }

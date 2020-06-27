@@ -48,15 +48,14 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(206)))));
-            this.button2.Location = new System.Drawing.Point(211, 330);
+            this.button2.Location = new System.Drawing.Point(231, 330);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 48);
+            this.button2.Size = new System.Drawing.Size(140, 48);
             this.button2.TabIndex = 4;
             this.button2.Text = "Uloguj se";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-           
             // 
             // checkBox1
             // 
@@ -75,9 +74,9 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(114)))), ((int)(((byte)(206)))));
-            this.button1.Location = new System.Drawing.Point(12, 330);
+            this.button1.Location = new System.Drawing.Point(44, 330);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 48);
+            this.button1.Size = new System.Drawing.Size(141, 48);
             this.button1.TabIndex = 8;
             this.button1.Text = "Izlaz";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -119,7 +118,7 @@
             this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_forgot_password_30;
             this.pictureBox3.Location = new System.Drawing.Point(44, 225);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(38, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
@@ -148,7 +147,7 @@
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(44, 182);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);

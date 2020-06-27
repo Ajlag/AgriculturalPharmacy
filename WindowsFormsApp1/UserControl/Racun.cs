@@ -75,12 +75,19 @@ namespace WindowsFormsApp1
 
         private void cmb_artikal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string odabrana = cmb_artikal.SelectedItem.ToString();
-            var deli = odabrana.Split(' ');
-            int cena = int.Parse(deli[1]);
-            txt_cena.Text = cena.ToString();
-            txt_ukupno1.Text = "";
-            textBox2.Text = "";
+            try
+            {
+                string odabrana = cmb_artikal.SelectedItem.ToString();
+                var deli = odabrana.Split(' ');
+                int cena = int.Parse(deli[1]);
+                txt_cena.Text = cena.ToString();
+                txt_ukupno1.Text = "";
+                textBox2.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Doslo je do greske, proverite unete podatke");
+            }
         }
 
       

@@ -25,14 +25,15 @@ namespace WindowsFormsApp1
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Zaposleni>().HasKey(z => z.KorisnickoIme);
+            modelBuilder.Entity<Zaposleni>().HasKey(z => z.KorisnickoIme );
             modelBuilder.Entity<Zaposleni>().Property(z => z.ime).IsRequired().HasMaxLength(20);
             modelBuilder.Entity<Zaposleni>().Property(z => z.prezime).IsRequired().HasMaxLength(20);
             modelBuilder.Entity<Zaposleni>().Property(z => z.datumRodjenja).IsRequired();
             modelBuilder.Entity<Zaposleni>().Property(z => z.lozinka).IsRequired();
             modelBuilder.Entity<Zaposleni>().Property(ca => ca.lozinka).HasMaxLength(20);
 
-            modelBuilder.Entity<VestackaDjubriva>().HasKey(z => z.barKod);
+            modelBuilder.Entity<VestackaDjubriva>().HasKey(z => z.barKod );
+            modelBuilder.Entity<VestackaDjubriva>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
 
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.naziv);
@@ -46,7 +47,7 @@ namespace WindowsFormsApp1
 
             modelBuilder.Entity<TipZemljista>().HasKey(s => s.naziv);
             modelBuilder.Entity<TipZemljista>().Property(s => s.specificnost).IsRequired();
-
+            modelBuilder.Entity<Semena>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<Semena>().HasKey(s => s.barKod);
             modelBuilder.Entity<Semena>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
             modelBuilder.Entity<Semena>().Property(z => z.datumProizvodnje).IsRequired();
@@ -56,15 +57,19 @@ namespace WindowsFormsApp1
 
             modelBuilder.Entity<Proizvodjac>().HasKey(s => s.oznaka);
             modelBuilder.Entity<Proizvodjac>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
+            modelBuilder.Entity<Proizvodjac>().HasIndex(u => u.naziv).IsUnique();
+
 
             modelBuilder.Entity<PrirodnaDjubriva>().HasKey(s => s.barKod);
             modelBuilder.Entity<PrirodnaDjubriva>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
+            modelBuilder.Entity<PrirodnaDjubriva>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<PrirodnaDjubriva>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<PrirodnaDjubriva>().Property(z => z.cena).IsRequired();
             modelBuilder.Entity<PrirodnaDjubriva>().Property(z => z.dostupno).IsRequired();
 
             modelBuilder.Entity<PomocniArtikal>().HasKey(s => s.barKod);
             modelBuilder.Entity<PomocniArtikal>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
+            modelBuilder.Entity<PomocniArtikal>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<PomocniArtikal>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<PomocniArtikal>().Property(z => z.cena).IsRequired();
             modelBuilder.Entity<PomocniArtikal>().Property(z => z.dostupno).IsRequired();
@@ -73,6 +78,7 @@ namespace WindowsFormsApp1
 
             modelBuilder.Entity<Hemikalije>().HasKey(s => s.barKod);
             modelBuilder.Entity<Hemikalije>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
+            modelBuilder.Entity<Hemikalije>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<Hemikalije>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<Hemikalije>().Property(z => z.cena).IsRequired();
             modelBuilder.Entity<Hemikalije>().Property(z => z.dostupno).IsRequired();
