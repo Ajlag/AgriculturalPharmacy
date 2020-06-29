@@ -74,3 +74,6 @@ C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFor
 C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.KreirajUniqueNaziv.resources
 C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.UniqueNazivZaSve.resources
 C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.SemenaUnique1.resources
+C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.KreirajNarudzbina.resources
+C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.aa.resources

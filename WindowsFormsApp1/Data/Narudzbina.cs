@@ -8,7 +8,9 @@ namespace WindowsFormsApp1
 {
   public  class Narudzbina
     {
-        public string status { get; set; }
+        public string naziv { get; set; }
+        public float cena { get; set; }
+        public int kolicina { get; set; }
         public int id{ get; set; }
         public DateTime datum { get; set; }
         public ICollection<Proizvodjac> Proizvodjacs { get; set; }

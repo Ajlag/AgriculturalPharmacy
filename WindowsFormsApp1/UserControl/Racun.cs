@@ -21,6 +21,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             context = new DBPoljoprivrednaApoteka();
             unit = new UnitOfWork(context);
+           
+
         }
        
 
@@ -112,21 +114,46 @@ namespace WindowsFormsApp1
                 listView1.Items.Add(lv1);
                 try { txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) + Convert.ToInt16(txt_ukupno1.Text)).ToString(); }
                 catch (Exception ex) { txt_ukupno.Text = ""; }
+ var novi = new Narudzbina
+            {
+                naziv = cmb_artikal.Text,
+                cena = int.Parse(txt_cena.Text),
+                
+                kolicina = int.Parse(textBox2.Text),
+               datum= DateTime.Today
+
+
+            };
+            this.unit.Narudzbinaa.AddNarudzbinas(novi);
+            this.unit.Complete();
+           
+
             }
             else
             {
                 MessageBox.Show("Popunite sva polja.");
                 return;
             }
+
+
+           
+
         }
 
         private void txt_popust_TextChanged(object sender, EventArgs e)
         {
-            if (txt_popust.Text.Length > 0)
-            { 
-            txt_neto.Text = (Convert.ToInt16(txt_ukupno.Text) - Convert.ToInt16(txt_popust.Text)).ToString();
+           
 
+           
+ if (txt_popust.Text.Length > 0)
+            {
+
+                txt_neto.Text = (Convert.ToDouble(txt_ukupno.Text) - Convert.ToDouble(txt_ukupno.Text) * (Convert.ToDouble(txt_popust.Text) / 100)).ToString();
             }
+           
+
+
+
         }
 
         private void txt_placeno_TextChanged(object sender, EventArgs e)
@@ -148,7 +175,9 @@ namespace WindowsFormsApp1
                         {
                             txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) - Convert.ToInt16(listView1.Items[i].SubItems[3].Text)).ToString();
                             listView1.Items[i].Remove();
-                        }
+                       
+
+                    }
                     
                 }
             }
@@ -190,6 +219,14 @@ namespace WindowsFormsApp1
         {
             try
             {
+                string naziv = cmb_artikal.Text;
+                float cena = int.Parse(txt_cena.Text);
+                int kolicina =int.Parse( textBox2.Text);
+                int ukupno = int.Parse(txt_ukupno.Text);
+                int placeno = int.Parse(txt_placeno.Text);
+                int kusur = int.Parse(txt_balans.Text);
+
+
                
                 PrintDocument p = new PrintDocument();
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
@@ -214,7 +251,53 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
+            textBox2.Text = "";
+            txt_balans.Text = "";
+            txt_cena.Text = "";
+            txt_neto.Text = "";
+            txt_placeno.Text = "";
+            txt_popust.Text = "";
+            txt_ukupno.Text = "";
+            txt_ukupno1.Text = "";
+            cmb_artikal.Text = "";
 
+        }
+
+        private void button1_Enter(object sender, EventArgs e)
+        {
+
+            string[] arr = new string[4];
+            arr[0] = cmb_artikal.SelectedItem.ToString();
+            arr[1] = txt_cena.Text;
+            arr[2] = textBox2.Text;
+            arr[3] = txt_ukupno1.Text;
+            if (!string.IsNullOrEmpty(arr[0]) && !string.IsNullOrEmpty(arr[1]) && !string.IsNullOrEmpty(arr[2])
+               && !string.IsNullOrEmpty(arr[3]))
+            {
+                ListViewItem lv1 = new ListViewItem(arr);
+                listView1.Items.Add(lv1);
+                try { txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) + Convert.ToInt16(txt_ukupno1.Text)).ToString(); }
+                catch (Exception ex) { txt_ukupno.Text = ""; }
+                var novi = new Narudzbina
+                {
+                    naziv = cmb_artikal.Text,
+                    cena = int.Parse(txt_cena.Text),
+
+                    kolicina = int.Parse(textBox2.Text),
+                    datum = DateTime.Today
+
+
+                };
+                this.unit.Narudzbinaa.AddNarudzbinas(novi);
+                this.unit.Complete();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Popunite sva polja.");
+                return;
+            }
         }
     }
 }

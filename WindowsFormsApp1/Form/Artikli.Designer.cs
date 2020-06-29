@@ -33,12 +33,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Artikli));
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Menu = new ns1.BunifuGradientPanel();
             this.bunifuFlatButton7 = new ns1.BunifuFlatButton();
@@ -51,11 +51,16 @@
             this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.AnimationMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AnimationMenuBack = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             this.Menu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -63,12 +68,12 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.pictureBox1);
             this.AnimationMenuBack.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.AnimationMenu.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.panel2.Location = new System.Drawing.Point(2, 3);
@@ -76,18 +81,19 @@
             this.panel2.Size = new System.Drawing.Size(1236, 68);
             this.panel2.TabIndex = 5;
             // 
-            // label1
+            // pictureBox2
             // 
-            this.label1.AutoSize = true;
-            this.AnimationMenu.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationMenuBack.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(75, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Poljoprivredna apoteka";
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.AnimationMenu.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationMenuBack.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.herba_natura_logo_large;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(107, 52);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button4
             // 
@@ -97,10 +103,10 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1084, 6);
+            this.button4.Location = new System.Drawing.Point(1148, 16);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(36, 36);
-            this.button4.TabIndex = 4;
+            this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -112,10 +118,10 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_minimize_window_30__1_1;
-            this.button3.Location = new System.Drawing.Point(1139, 6);
+            this.button3.Location = new System.Drawing.Point(1106, 16);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(36, 36);
-            this.button3.TabIndex = 3;
+            this.button3.TabIndex = 6;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -127,12 +133,26 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1190, 9);
+            this.button1.Location = new System.Drawing.Point(1190, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(36, 36);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.AnimationMenu.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationMenuBack.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(136, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(349, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Poljoprivredna apoteka";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
             // 
@@ -142,25 +162,12 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_shutdown_40;
-            this.button2.Location = new System.Drawing.Point(1001, 9);
+            this.button2.Location = new System.Drawing.Point(1038, 9);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(62, 49);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.AnimationMenu.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationMenuBack.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_menu_30;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel4
             // 
@@ -170,9 +177,9 @@
             this.panel4.Controls.Add(this.Menu);
             this.AnimationMenuBack.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
             this.AnimationMenu.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.panel4.Location = new System.Drawing.Point(2, 64);
+            this.panel4.Location = new System.Drawing.Point(2, 68);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(277, 696);
+            this.panel4.Size = new System.Drawing.Size(267, 692);
             this.panel4.TabIndex = 0;
             // 
             // Menu
@@ -197,7 +204,7 @@
             this.Menu.Location = new System.Drawing.Point(10, 3);
             this.Menu.Name = "Menu";
             this.Menu.Quality = 10;
-            this.Menu.Size = new System.Drawing.Size(257, 690);
+            this.Menu.Size = new System.Drawing.Size(257, 686);
             this.Menu.TabIndex = 0;
             // 
             // bunifuFlatButton7
@@ -223,7 +230,7 @@
             this.bunifuFlatButton7.IconVisible = true;
             this.bunifuFlatButton7.IconZoom = 50D;
             this.bunifuFlatButton7.IsTab = false;
-            this.bunifuFlatButton7.Location = new System.Drawing.Point(9, 424);
+            this.bunifuFlatButton7.Location = new System.Drawing.Point(19, 453);
             this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.Transparent;
@@ -261,7 +268,7 @@
             this.bunifuFlatButton6.IconVisible = true;
             this.bunifuFlatButton6.IconZoom = 50D;
             this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(4, 491);
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(14, 520);
             this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.Transparent;
@@ -299,7 +306,7 @@
             this.bunifuFlatButton5.IconVisible = true;
             this.bunifuFlatButton5.IconZoom = 50D;
             this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(4, 348);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(14, 377);
             this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Transparent;
@@ -337,7 +344,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 50D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(9, 281);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(19, 310);
             this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
@@ -375,7 +382,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 50D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(9, 202);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(19, 231);
             this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
@@ -413,7 +420,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 50D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(9, 121);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(19, 150);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Transparent;
@@ -451,7 +458,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 50D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(9, 54);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(19, 83);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
@@ -498,12 +505,61 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.AnimationMenuBack.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.AnimationMenu.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Location = new System.Drawing.Point(275, 68);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(963, 692);
             this.panel1.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.AnimationMenu.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationMenuBack.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(412, 380);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 38);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "label3";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.AnimationMenu.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationMenuBack.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(412, 334);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 38);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.AnimationMenu.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationMenuBack.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.herba_natura_logo_large;
+            this.pictureBox1.Location = new System.Drawing.Point(207, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(544, 176);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // AnimationMenuBack
             // 
@@ -545,16 +601,18 @@
             this.Text = "Artikli";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel4;
         private ns1.BunifuGradientPanel Menu;
@@ -566,12 +624,16 @@
         private ns1.BunifuFlatButton bunifuFlatButton2;
         private ns1.BunifuFlatButton bunifuFlatButton1;
         private ns1.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
         private BunifuAnimatorNS.BunifuTransition AnimationMenu;
         private BunifuAnimatorNS.BunifuTransition AnimationMenuBack;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

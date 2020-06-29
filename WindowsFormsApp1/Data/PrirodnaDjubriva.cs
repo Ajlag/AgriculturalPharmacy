@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
         public string TipZemljista { get; set; }
         public DateTime datumProizvodnje { get; set; }
         public int barKod { get; set; }
-        public int dostupno { get; set; }
+      
      //   public ICollection<TipZemljista> TipZemljistas { get; set; }
      
         public override string ToString()

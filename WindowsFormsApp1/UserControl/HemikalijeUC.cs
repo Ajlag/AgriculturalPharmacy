@@ -40,22 +40,29 @@ namespace WindowsFormsApp1
             // string godina = dataGridView1.ToString();
             try
             {
-                var novi = new Hemikalije
-                {
-                    naziv = textBox1.Text,
-                    cena = int.Parse(textBox2.Text),
-                   // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
-                    stepenOtrovnosti = textBox4.Text,
-                    datumProizvodnje = dateTimePicker2.Value,
-                    proizvodjac = comboBox2.Text,
-                    TipZemljista= comboBox1.Text
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" || comboBox1.Text == "" || textBox4.Text == "") {
+                    MessageBox.Show("Morate popuniti sva polja");
 
-                };
-                this.unit.Hemikalijee.AddHemikalijes(novi);
-                this.unit.Complete();
-                MessageBox.Show("Dodata je nova hemikalija.");
+                }
+                else
+                {
+                    var novi = new Hemikalije
+                    {
+                        naziv = textBox1.Text,
+                        cena = int.Parse(textBox2.Text),
+                        // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
+                        stepenOtrovnosti = textBox4.Text,
+                        datumProizvodnje = dateTimePicker2.Value,
+                        proizvodjac = comboBox2.Text,
+                        TipZemljista = comboBox1.Text
+
+                    };
+                    this.unit.Hemikalijee.AddHemikalijes(novi);
+                    this.unit.Complete();
+                    MessageBox.Show("Dodata je nova hemikalija.");
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Doslo je do greske, proverite unete podatke");
             }
@@ -109,20 +116,25 @@ namespace WindowsFormsApp1
         {
             try
             {
-
-
-
-                DialogResult Brisi;
-                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (Brisi == DialogResult.Yes)
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" || comboBox1.Text == "" || textBox4.Text == "")
                 {
-                       string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
-                var hemikalija = this.unit.Hemikalijee.GetHemikalijelBybarKod(int.Parse(barKod));
-                this.unit.Hemikalijee.DeleteHemikalije(hemikalija);
-                this.unit.Complete();
-                MessageBox.Show("Izbrisali ste hemikaliju.");
+                    MessageBox.Show("Morate izabrati artikal ili popuniti prazna polja");
+
                 }
-             
+                else
+                {
+
+                    DialogResult Brisi;
+                    Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (Brisi == DialogResult.Yes)
+                    {
+                        string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                        var hemikalija = this.unit.Hemikalijee.GetHemikalijelBybarKod(int.Parse(barKod));
+                        this.unit.Hemikalijee.DeleteHemikalije(hemikalija);
+                        this.unit.Complete();
+                        MessageBox.Show("Izbrisali ste hemikaliju.");
+                    }
+                }
             }
             catch (Exception ex)
             {

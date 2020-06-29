@@ -60,6 +60,7 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cmb_artikal
@@ -118,7 +119,7 @@
             // 
             // txt_cena
             // 
-            this.txt_cena.Location = new System.Drawing.Point(41, 153);
+            this.txt_cena.Location = new System.Drawing.Point(46, 153);
             this.txt_cena.Name = "txt_cena";
             this.txt_cena.Size = new System.Drawing.Size(100, 22);
             this.txt_cena.TabIndex = 6;
@@ -172,13 +173,14 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(557, 147);
+            this.button1.Location = new System.Drawing.Point(638, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 34);
             this.button1.TabIndex = 12;
             this.button1.Text = "Dodaj stavku";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Enter += new System.EventHandler(this.button1_Enter);
             // 
             // listView1
             // 
@@ -254,7 +256,6 @@
             this.txt_popust.Name = "txt_popust";
             this.txt_popust.Size = new System.Drawing.Size(100, 22);
             this.txt_popust.TabIndex = 16;
-            this.txt_popust.Text = "0";
             this.txt_popust.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_popust.TextChanged += new System.EventHandler(this.txt_popust_TextChanged);
             // 
@@ -264,9 +265,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(478, 473);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 17);
+            this.label7.Size = new System.Drawing.Size(68, 17);
             this.label7.TabIndex = 19;
-            this.label7.Text = "Neto";
+            this.label7.Text = "Za uplatu";
             // 
             // txt_neto
             // 
@@ -319,7 +320,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(557, 206);
+            this.button2.Location = new System.Drawing.Point(638, 197);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 40);
             this.button2.TabIndex = 24;
@@ -373,11 +374,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(438, 481);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 17);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "%";
+            // 
             // Racun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.radioButton5);
@@ -447,5 +459,6 @@
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label10;
     }
 }

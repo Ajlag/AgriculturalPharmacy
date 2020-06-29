@@ -39,18 +39,26 @@ namespace WindowsFormsApp1
         {
             try
             {
-                var novi = new PomocniArtikal// dodavanje artikala u bazi
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == ""  )
                 {
-                    naziv = textBox1.Text,
-                    proizvodjac = comboBox2.Text,
-                    cena = int.Parse(textBox2.Text),
-                    datumProizvodnje = dateTimePicker2.Value,
-                  
+                    MessageBox.Show("Morate popuniti sva polja");
 
-                };
-                this.unit.PomocniArtikall.AddPomocniArtikals(novi);
-                this.unit.Complete();
-                MessageBox.Show("Dodat je novi artikal.");
+                }
+                else
+                {
+                    var novi = new PomocniArtikal// dodavanje artikala u bazi
+                    {
+                        naziv = textBox1.Text,
+                        proizvodjac = comboBox2.Text,
+                        cena = int.Parse(textBox2.Text),
+                        datumProizvodnje = dateTimePicker2.Value,
+
+
+                    };
+                    this.unit.PomocniArtikall.AddPomocniArtikals(novi);
+                    this.unit.Complete();
+                    MessageBox.Show("Dodat je novi artikal.");
+                }
             }
             catch (Exception ex)
             {
@@ -90,7 +98,11 @@ namespace WindowsFormsApp1
             try
             {
 
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "")
+                {
+                    MessageBox.Show("Izaberite artikal koji  želite da izbrišete ili popunite prazna polja");
 
+                }
 
                 DialogResult Brisi;
                 Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

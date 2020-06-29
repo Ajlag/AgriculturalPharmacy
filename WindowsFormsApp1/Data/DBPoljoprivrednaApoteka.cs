@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.naziv);
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<VestackaDjubriva>().Property(z => z.cena).IsRequired();
-            modelBuilder.Entity<VestackaDjubriva>().Property(z => z.dostupno).IsRequired();
+           
 
 
 
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
             modelBuilder.Entity<Semena>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
             modelBuilder.Entity<Semena>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<Semena>().Property(z => z.cena).IsRequired();
-            modelBuilder.Entity<Semena>().Property(z => z.dostupno).IsRequired();
+           
 
 
             modelBuilder.Entity<Proizvodjac>().HasKey(s => s.oznaka);
@@ -65,14 +65,14 @@ namespace WindowsFormsApp1
             modelBuilder.Entity<PrirodnaDjubriva>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<PrirodnaDjubriva>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<PrirodnaDjubriva>().Property(z => z.cena).IsRequired();
-            modelBuilder.Entity<PrirodnaDjubriva>().Property(z => z.dostupno).IsRequired();
+           
 
             modelBuilder.Entity<PomocniArtikal>().HasKey(s => s.barKod);
             modelBuilder.Entity<PomocniArtikal>().Property(z => z.naziv).IsRequired().HasMaxLength(15);
             modelBuilder.Entity<PomocniArtikal>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<PomocniArtikal>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<PomocniArtikal>().Property(z => z.cena).IsRequired();
-            modelBuilder.Entity<PomocniArtikal>().Property(z => z.dostupno).IsRequired();
+           
 
             modelBuilder.Entity<Narudzbina>().HasKey(s => s.id);
 
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             modelBuilder.Entity<Hemikalije>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<Hemikalije>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<Hemikalije>().Property(z => z.cena).IsRequired();
-            modelBuilder.Entity<Hemikalije>().Property(z => z.dostupno).IsRequired();
+            
            // modelBuilder.Entity<TipZemljista>().WithMany(d => d.TipZemljista).HasForeignKey(bd => bd.naziv);
 
         }

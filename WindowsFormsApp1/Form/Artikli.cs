@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
         public Artikli()
         {
             InitializeComponent();
+            label2.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            label3.Text = DateTime.Now.ToString("H:mm:ss");
         }
 
     
@@ -147,9 +149,63 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
         }
 
-      
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (Menu.Width == 193)
+            {
+                Menu.Visible = false;
+                Menu.Width = 50;
+                panel4.Width = 80;
+                AnimationMenu.Show(Menu);
+
+
+
+
+
+
+            }
+            else
+            {
+                Menu.Visible = false;
+                Menu.Width = 193;
+                panel4.Width = 217;
+                AnimationMenuBack.Show(Menu);
+
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+        public void Reset()
+        { 
+            this.Hide();
+            Artikli f = new Artikli();
+            f.Show();
+           
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        //private void Artikli_Load(object sender, EventArgs e)
+        //{
+        //    label2.Text = DateTime.Now.ToString("MM/dd/yyyy  H:mm:ss");
+        //}
+
+
     }
 }

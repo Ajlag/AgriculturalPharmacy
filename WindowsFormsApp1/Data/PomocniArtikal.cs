@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
        public string oznaka {  get; set; }
         public int barKod { get; set; }
         public ICollection<Proizvodjac> Proizvodjacs { get; set; }
-        public int dostupno { get; set; }
+       
         public override string ToString()
         {
             return naziv + " " + cena;

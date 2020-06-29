@@ -115,20 +115,25 @@ namespace WindowsFormsApp1
         {
             try
             {
-
-
-
-                DialogResult Brisi;
-                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (Brisi == DialogResult.Yes)
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox1.Text == "" || comboBox2.Text == "" || dateTimePicker2.Text == "")
                 {
-                    string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
-                    var vastackadjubriva = this.unit.VestackaDjubrivaa.GetVestackaDjubrivaBybarKod(int.Parse(barKod));
-                    this.unit.VestackaDjubrivaa.DeleteVestackaDjubriva(vastackadjubriva);
-                    this.unit.Complete();
-                    MessageBox.Show("Izbrisali ste hemikaliju.");
+                    MessageBox.Show("Izaberite artikal koji  želite da izbrišete ili popunite prazna polja!");
                 }
+                else
+                {
 
+
+                    DialogResult Brisi;
+                    Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (Brisi == DialogResult.Yes)
+                    {
+                        string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                        var vastackadjubriva = this.unit.VestackaDjubrivaa.GetVestackaDjubrivaBybarKod(int.Parse(barKod));
+                        this.unit.VestackaDjubrivaa.DeleteVestackaDjubriva(vastackadjubriva);
+                        this.unit.Complete();
+                        MessageBox.Show("Izbrisali ste hemikaliju.");
+                    }
+                }
             }
             catch (Exception ex)
             {
