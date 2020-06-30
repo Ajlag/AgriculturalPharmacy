@@ -113,6 +113,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_clean_26;
             this.button4.Location = new System.Drawing.Point(593, 254);
             this.button4.Name = "button4";
@@ -125,6 +126,7 @@
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_remove_26__1_;
             this.button5.Location = new System.Drawing.Point(414, 254);
             this.button5.Name = "button5";

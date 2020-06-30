@@ -114,6 +114,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(380, 350);
             this.label7.Name = "label7";
@@ -123,6 +124,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(498, 345);
             this.comboBox1.Name = "comboBox1";
@@ -131,6 +133,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_clean_26;
             this.button3.Location = new System.Drawing.Point(509, 248);
             this.button3.Name = "button3";
@@ -143,6 +146,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_remove_26__1_;
             this.button2.Location = new System.Drawing.Point(330, 248);
             this.button2.Name = "button2";

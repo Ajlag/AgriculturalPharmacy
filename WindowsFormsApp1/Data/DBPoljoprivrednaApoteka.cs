@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         public DbSet<PomocniArtikal> PomocniArtikall { get; set; }
         public DbSet<Narudzbina> Narudzbinaa { get; set; }
         public DbSet<Hemikalije> Hemikalijee { get; set; }
-
+       
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -81,15 +81,17 @@ namespace WindowsFormsApp1
             modelBuilder.Entity<Hemikalije>().HasIndex(u => u.naziv).IsUnique();
             modelBuilder.Entity<Hemikalije>().Property(z => z.datumProizvodnje).IsRequired();
             modelBuilder.Entity<Hemikalije>().Property(z => z.cena).IsRequired();
-            
-           // modelBuilder.Entity<TipZemljista>().WithMany(d => d.TipZemljista).HasForeignKey(bd => bd.naziv);
 
+          
         }
 
 
-
-       
-       
-        }
     }
+
+
+
+
+
+}
+    
 

@@ -96,61 +96,73 @@ namespace WindowsFormsApp1
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (textBox2.Text.Length > 0)
+            try
             {
-                txt_ukupno1.Text = (Convert.ToInt16(txt_cena.Text) * Convert.ToInt16(textBox2.Text)).ToString();
-            } }
+                if (textBox2.Text.Length > 0)
+                {
+                    txt_ukupno1.Text = (Convert.ToInt16(txt_cena.Text) * Convert.ToInt16(textBox2.Text)).ToString();
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Morate uneti broj"); }
+            }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] arr = new string[4];
-            arr[0] = cmb_artikal.SelectedItem.ToString();
-            arr[1] = txt_cena.Text;
-            arr[2] = textBox2.Text;
-            arr[3] = txt_ukupno1.Text;
-            if(!string.IsNullOrEmpty(arr[0]) && !string.IsNullOrEmpty(arr[1]) && !string.IsNullOrEmpty(arr[2])
-               && !string.IsNullOrEmpty(arr[3])) {
-                ListViewItem lv1 = new ListViewItem(arr);
-                listView1.Items.Add(lv1);
-                try { txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) + Convert.ToInt16(txt_ukupno1.Text)).ToString(); }
-                catch (Exception ex) { txt_ukupno.Text = ""; }
- var novi = new Narudzbina
-            {
-                naziv = cmb_artikal.Text,
-                cena = int.Parse(txt_cena.Text),
-                
-                kolicina = int.Parse(textBox2.Text),
-               datum= DateTime.Today
-
-
-            };
-            this.unit.Narudzbinaa.AddNarudzbinas(novi);
-            this.unit.Complete();
-           
-
-            }
+            if (cmb_artikal.Text == "") { MessageBox.Show("Izabrite artikal"); }
             else
             {
-                MessageBox.Show("Popunite sva polja.");
-                return;
+                string[] arr = new string[4];
+                arr[0] = cmb_artikal.SelectedItem.ToString();
+                arr[1] = txt_cena.Text;
+                arr[2] = textBox2.Text;
+                arr[3] = txt_ukupno1.Text;
+
+
+                if (!string.IsNullOrEmpty(arr[0]) && !string.IsNullOrEmpty(arr[1]) && !string.IsNullOrEmpty(arr[2])
+                       && !string.IsNullOrEmpty(arr[3]))
+                {
+                    ListViewItem lv1 = new ListViewItem(arr);
+                    listView1.Items.Add(lv1);
+                    try { txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) + Convert.ToInt16(txt_ukupno1.Text)).ToString(); }
+                    catch (Exception ex) { txt_ukupno.Text = ""; }
+                    var novi = new Narudzbina
+                    {
+                        naziv = cmb_artikal.Text,
+                        cena = int.Parse(txt_cena.Text),
+
+                        kolicina = int.Parse(textBox2.Text),
+                        datum = DateTime.Today
+
+
+                    };
+                    this.unit.Narudzbinaa.AddNarudzbinas(novi);
+                    this.unit.Complete();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Popunite sva polja.");
+                    return;
+                }
             }
-
-
-           
+                       
 
         }
 
         private void txt_popust_TextChanged(object sender, EventArgs e)
         {
-           
 
-           
- if (txt_popust.Text.Length > 0)
+            try
             {
 
-                txt_neto.Text = (Convert.ToDouble(txt_ukupno.Text) - Convert.ToDouble(txt_ukupno.Text) * (Convert.ToDouble(txt_popust.Text) / 100)).ToString();
+                if (txt_popust.Text.Length > 0)
+                {
+
+                    txt_neto.Text = (Convert.ToDouble(txt_ukupno.Text) - Convert.ToDouble(txt_ukupno.Text) * (Convert.ToDouble(txt_popust.Text) / 100)).ToString();
+                }
             }
-           
+            catch (Exception ex) { MessageBox.Show("Morate uneti broj"); }
 
 
 
@@ -158,11 +170,15 @@ namespace WindowsFormsApp1
 
         private void txt_placeno_TextChanged(object sender, EventArgs e)
         {
-            if (txt_placeno.Text.Length > 0)
+            try
             {
-                txt_balans.Text = (Convert.ToInt16(txt_neto.Text) - Convert.ToInt16(txt_placeno.Text)).ToString();
+                if (txt_placeno.Text.Length > 0)
+                {
+                    txt_balans.Text = (Convert.ToDouble(txt_neto.Text) - Convert.ToDouble(txt_placeno.Text)).ToString();
 
+                }
             }
+            catch (Exception ex) { MessageBox.Show("Morate uneti broj"); }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -216,22 +232,47 @@ namespace WindowsFormsApp1
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
+        {      
+
             try
             {
-                string naziv = cmb_artikal.Text;
-                float cena = int.Parse(txt_cena.Text);
-                int kolicina =int.Parse( textBox2.Text);
-                int ukupno = int.Parse(txt_ukupno.Text);
-                int placeno = int.Parse(txt_placeno.Text);
-                int kusur = int.Parse(txt_balans.Text);
-
-
-               
+               double ukupno = double.Parse(txt_neto.Text);
+               int placeno = int.Parse(txt_placeno.Text);
+                double kusur = double.Parse(txt_balans.Text);
+                string r = "Račun :" ;
+                string u = "Sve ukupno :"+ukupno;
+                string pl = "Placeno :" + placeno;
+                string k = "Kusur :" + kusur;
+                string na = "Naziv artikla :" ;
+                string c = "Cena";
+                string kol = "Količina";
+                string uk = "Ukupno";
+                string nl = "\n";
                 PrintDocument p = new PrintDocument();
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
-                {
-                    e1.Graphics.DrawString("Naziv: " + listView1.Columns + "\n" , new Font("Times New Roman", 12), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                {  e1.Graphics.DrawString(" "+ r +"\n \n \n"+"\t"+nl+nl, new Font("Times New Roman", 12), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                  
+                     e1.Graphics.DrawString(" \t" +na+ "\t" + "\t"+c+"\t"+"\t"+kol+"\t"+"\t"+uk+"\t"+"\n"+"\n"+nl+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                     e1.Graphics.DrawString("\n " + nl+nl+"\n"+"\b"+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                    //e1.Graphics.DrawString("-------------------------------------------------------------------- " , new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+
+                    for (int i = 0; i < listView1.Items.Count; i++)
+                    {
+                        string prvi = listView1.Items[i].SubItems[0].Text;
+                        string drugi = listView1.Items[i].SubItems[1].Text;
+                        string treci = listView1.Items[i].SubItems[2].Text;
+                        string cetvrti = listView1.Items[i].SubItems[3].Text;
+                       
+                       
+                       
+                    e1.Graphics.DrawString("                                                                                                            "+nl+nl+ "\t " + prvi  + "\t"+"\t" +drugi+ "\t"+"\t"+treci + "\t" +"\t"+ cetvrti+ "\n"+"\n"+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                   
+                      
+
+                    }
+                    e1.Graphics.DrawString("\n " +nl+ "\n", new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                    e1.Graphics.DrawString(nl+"  " +nl+nl+ u + "\n" +nl+ nl+pl+ "\n" + " " +nl+ k+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+
                 };
                 try
                 {
@@ -263,41 +304,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Enter(object sender, EventArgs e)
-        {
-
-            string[] arr = new string[4];
-            arr[0] = cmb_artikal.SelectedItem.ToString();
-            arr[1] = txt_cena.Text;
-            arr[2] = textBox2.Text;
-            arr[3] = txt_ukupno1.Text;
-            if (!string.IsNullOrEmpty(arr[0]) && !string.IsNullOrEmpty(arr[1]) && !string.IsNullOrEmpty(arr[2])
-               && !string.IsNullOrEmpty(arr[3]))
-            {
-                ListViewItem lv1 = new ListViewItem(arr);
-                listView1.Items.Add(lv1);
-                try { txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) + Convert.ToInt16(txt_ukupno1.Text)).ToString(); }
-                catch (Exception ex) { txt_ukupno.Text = ""; }
-                var novi = new Narudzbina
-                {
-                    naziv = cmb_artikal.Text,
-                    cena = int.Parse(txt_cena.Text),
-
-                    kolicina = int.Parse(textBox2.Text),
-                    datum = DateTime.Today
-
-
-                };
-                this.unit.Narudzbinaa.AddNarudzbinas(novi);
-                this.unit.Complete();
-
-
-            }
-            else
-            {
-                MessageBox.Show("Popunite sva polja.");
-                return;
-            }
+      
         }
     }
-}
+
