@@ -68,12 +68,4 @@ C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\Polj
 C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.Aco.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.Ajla.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.UkloniVezu.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.DodajKorisnika.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.KreirajUniqueNaziv.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.UniqueNazivZaSve.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.SemenaUnique1.resources
 C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.KreirajNarudzbina.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.aa.resources

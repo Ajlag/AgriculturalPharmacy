@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Migrations;
 
 namespace WindowsFormsApp1
 {
@@ -23,16 +24,30 @@ namespace WindowsFormsApp1
             comboBox2.Items.Clear();
             foreach (var p in proizvodjac)
             {
-                comboBox2.Items.Add(p.naziv.ToString());
+                comboBox2.Items.Add(p.oznaka.ToString());
             }
-
-
+         
+            
+            
             var pomocniartikli = this.unit.PomocniArtikall.GetAllPomocniArtikals();
             foreach (var a in pomocniartikli)
             {
-                dataGridView1.DataSource = pomocniartikli;
+              //  dataGridView1.DataSource = pomocniartikli;
             }
+          
 
+            dataGridView1.DataSource = (from a in pomocniartikli
+                                        join b in proizvodjac on a.oznakaProzivodjacaFK equals b.oznaka
+                                        where a.oznakaProzivodjacaFK == b.oznaka
+                                        select new
+                                        {
+                                            Naziv = a.naziv,
+                                            OznakaProizvodjaca = a.oznakaProzivodjacaFK,
+                                            Cena = a.cena,
+                                            DatumProizvodnje = a.datumProizvodnje,
+                                            BarKod = a.barKod,
+                                            NazivProizvodjaca = b.naziv
+                                        }).ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,7 +64,7 @@ namespace WindowsFormsApp1
                     var novi = new PomocniArtikal// dodavanje artikala u bazi
                     {
                         naziv = textBox1.Text,
-                        proizvodjac = comboBox2.Text,
+                        oznakaProzivodjacaFK =comboBox2.Text,
                         cena = int.Parse(textBox2.Text),
                         datumProizvodnje = dateTimePicker2.Value,
 
@@ -97,24 +112,25 @@ namespace WindowsFormsApp1
         {
             try
             {
-
-                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "")
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" || dateTimePicker2.Text == "")
                 {
-                    MessageBox.Show("Izaberite artikal koji  želite da izbrišete ili popunite prazna polja");
-
+                    MessageBox.Show("Izaberite artikal koji  želite da izbrišete ili popunite prazna polja!");
                 }
-
-                DialogResult Brisi;
-                Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (Brisi == DialogResult.Yes)
+                else
                 {
-                    string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
-                    var pomocniartikal = this.unit.PomocniArtikall.GetPomocniArtikalBybarKod(int.Parse(barKod));
-                    this.unit.PomocniArtikall.DeletePomocniArtikal(pomocniartikal);
-                    this.unit.Complete();
-                    MessageBox.Show("Izbrisali ste hemikaliju.");
-                }
 
+                    DialogResult Brisi;
+                    Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (Brisi == DialogResult.Yes)
+                    {
+                        string barKod = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
+
+                        var pomocniartikli = this.unit.PomocniArtikall.GetPomocniArtikalBybarKod(int.Parse(barKod));
+                        this.unit.PomocniArtikall.DeletePomocniArtikal(pomocniartikli);
+                        this.unit.Complete();
+                        MessageBox.Show("Izbrisali ste artikal.");
+                    }
+                }
             }
             catch (Exception ex)
             {

@@ -9,13 +9,13 @@ namespace WindowsFormsApp1
   public  class VestackaDjubriva
     {
         public string naziv { get; set; }
-        public string proizvodjac { get; set; }
+       
         public float cena { get; set; }
-        public string TipZemljista { get; set; }
+        public string NazivZemljista { get; set; }
         public DateTime datumProizvodnje { get; set; }
         public int barKod { get; set; }
 
-      //  public ICollection<TipZemljista> TipZemljistas { get; set; }
+        public TipZemljista TipZemljista { get; set; }
         public override string ToString()
         {
             return naziv + " " + cena;

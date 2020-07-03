@@ -10,8 +10,9 @@ namespace WindowsFormsApp1
     {
         public string naziv { get; set; }
         public string oznaka { get; set; }
+       
+       public ICollection<PomocniArtikal> PomocniArtikals { get; set; }
+        
 
-        public ICollection<PomocniArtikal> PomocniArtikals { get; set; }
-        public ICollection<Narudzbina> Narudzbinas { get; set; }
     }
 }

@@ -48,7 +48,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(160, 446);
+            this.textBox2.Location = new System.Drawing.Point(170, 449);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(183, 22);
             this.textBox2.TabIndex = 45;
@@ -56,21 +56,21 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(160, 406);
+            this.comboBox2.Location = new System.Drawing.Point(170, 409);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(183, 24);
             this.comboBox2.TabIndex = 44;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(160, 363);
+            this.dateTimePicker2.Location = new System.Drawing.Point(170, 366);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(183, 22);
             this.dateTimePicker2.TabIndex = 43;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 328);
+            this.textBox1.Location = new System.Drawing.Point(170, 331);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 22);
             this.textBox1.TabIndex = 42;
@@ -89,9 +89,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(20, 409);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.Size = new System.Drawing.Size(141, 17);
             this.label3.TabIndex = 39;
-            this.label3.Text = "Proizvodjač";
+            this.label3.Text = "Oznaka proizvodjača";
             // 
             // label2
             // 

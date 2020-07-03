@@ -26,12 +26,12 @@ namespace WindowsFormsApp1
                 dataGridView1.DataSource=hemikalije;
             }
 
-            var tipzemljista = this.unit.TipZemljistaa.GetAllTipZemljistas();
-            comboBox1.Items.Clear();
-            foreach (var tz in tipzemljista)
-            {
-                comboBox1.Items.Add(tz.naziv.ToString());
-            }
+            //var tipzemljista = this.unit.TipZemljistaa.GetAllTipZemljistas();
+            //comboBox1.Items.Clear();
+            //foreach (var tz in tipzemljista)
+            //{
+            //    comboBox1.Items.Add(tz.naziv.ToString());
+            //}
         }
     
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             // string godina = dataGridView1.ToString();
             try
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" || comboBox1.Text == "" || textBox4.Text == "") {
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" ||  textBox4.Text == "") {
                     MessageBox.Show("Morate popuniti sva polja");
 
                 }
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
                         stepenOtrovnosti = textBox4.Text,
                         datumProizvodnje = dateTimePicker2.Value,
                         proizvodjac = comboBox2.Text,
-                        TipZemljista = comboBox1.Text
+                        //TipZemljista = comboBox1.Text
 
                     };
                     this.unit.Hemikalijee.AddHemikalijes(novi);
@@ -88,13 +88,13 @@ namespace WindowsFormsApp1
                 string datumpro = dataGridView1.SelectedRows[0].Cells[3].Value + string.Empty;
                 string proizvodjac = dataGridView1.SelectedRows[0].Cells[1].Value + string.Empty;
                 string cena = dataGridView1.SelectedRows[0].Cells[2].Value + string.Empty;
-                string tipzemljista = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
-                string stepenotrovnosti = dataGridView1.SelectedRows[0].Cells[5].Value + string.Empty;
+            //    string tipzemljista = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
+                string stepenotrovnosti = dataGridView1.SelectedRows[0].Cells[4].Value + string.Empty;
                 
 
                 textBox1.Text = naziv;
               dateTimePicker2.Value = DateTime.Parse(datumpro);
-                comboBox1.Text = tipzemljista;
+            //    comboBox1.Text = tipzemljista;
                 comboBox2.Text = proizvodjac;
                 textBox2.Text = cena;
                 textBox4.Text = stepenotrovnosti;
@@ -107,7 +107,7 @@ namespace WindowsFormsApp1
             textBox1.Text = "";
             textBox2.Text = "";
             comboBox2.Text = "";
-            comboBox1.Text = "";
+            //comboBox1.Text = "";
             textBox4.Text = "";
             dateTimePicker2.Value = DateTime.Today;
         }
@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" || comboBox1.Text == "" || textBox4.Text == "")
+                if (textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" ||  textBox4.Text == "")
                 {
                     MessageBox.Show("Morate izabrati artikal ili popuniti prazna polja");
 
@@ -128,7 +128,7 @@ namespace WindowsFormsApp1
                     Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (Brisi == DialogResult.Yes)
                     {
-                        string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                        string barKod = dataGridView1.SelectedRows[0].Cells[5].Value + string.Empty;
                         var hemikalija = this.unit.Hemikalijee.GetHemikalijelBybarKod(int.Parse(barKod));
                         this.unit.Hemikalijee.DeleteHemikalije(hemikalija);
                         this.unit.Complete();

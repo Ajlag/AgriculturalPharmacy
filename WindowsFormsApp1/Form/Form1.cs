@@ -53,6 +53,7 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Proverite lozinku");
                 }
+                //LOGOVANJE
                 else if (this.unit.Zaposlenii.CombinationExists(korisnicko, lozinka) == true)
                 {
                    

@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
         public int kolicina { get; set; }
         public int id{ get; set; }
         public DateTime datum { get; set; }
-        public ICollection<Proizvodjac> Proizvodjacs { get; set; }
+     
 
     }
 }

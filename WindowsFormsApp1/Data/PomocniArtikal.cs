@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-  public  class PomocniArtikal
+  public  class PomocniArtikal 
     {
         public string naziv { get; set; }
-        public string proizvodjac { get; set; }
+        public string  oznakaProzivodjacaFK { get; set; }
         public float cena { get; set; }
         public DateTime datumProizvodnje { get; set; }
-       public string oznaka {  get; set; }
+      
         public int barKod { get; set; }
-        public ICollection<Proizvodjac> Proizvodjacs { get; set; }
+        public Proizvodjac Proizvodjac { get; set; }
        
         public override string ToString()
         {

@@ -28,11 +28,17 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || dateTimePicker2.Text == "" || textBox3.Text == "" || textBox2.Text=="" || textBox4.Text=="" )
+            string allowedchar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            if (textBox1.Text == "" || dateTimePicker2.Text == "" || textBox3.Text == "" || textBox2.Text == "" || textBox4.Text == "")
             {
                 MessageBox.Show("Morate popuniti sva polja!");
             }
+            else if (!textBox4.Text.All(allowedchar.Contains))
+            {
+                MessageBox.Show("Proverite lozinku");
+            }
             else
+
             {
                 try
                 {
@@ -46,8 +52,8 @@ namespace WindowsFormsApp1
                             // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
 
                             datumRodjenja = dateTimePicker2.Value,
-                            KorisnickoIme=textBox2.Text,
-                            lozinka=textBox4.Text
+                            KorisnickoIme = textBox2.Text,
+                            lozinka = textBox4.Text
 
                         };
                         this.unit.Zaposlenii.AddZaposleni(novi);
@@ -79,6 +85,8 @@ namespace WindowsFormsApp1
             textBox1.Text = "";
             textBox3.Text = "";
             dateTimePicker2.Value = DateTime.Today;
+            textBox2.Text = "";
+            textBox4.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)

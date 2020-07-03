@@ -111,40 +111,43 @@ namespace WindowsFormsApp1
             if (cmb_artikal.Text == "") { MessageBox.Show("Izabrite artikal"); }
             else
             {
-                string[] arr = new string[4];
-                arr[0] = cmb_artikal.SelectedItem.ToString();
-                arr[1] = txt_cena.Text;
-                arr[2] = textBox2.Text;
-                arr[3] = txt_ukupno1.Text;
+               
+                    string[] arr = new string[4];
+                    arr[0] = cmb_artikal.SelectedItem.ToString();
+                    arr[1] = txt_cena.Text;
+                    arr[2] = textBox2.Text;
+                    arr[3] = txt_ukupno1.Text;
 
 
-                if (!string.IsNullOrEmpty(arr[0]) && !string.IsNullOrEmpty(arr[1]) && !string.IsNullOrEmpty(arr[2])
-                       && !string.IsNullOrEmpty(arr[3]))
-                {
-                    ListViewItem lv1 = new ListViewItem(arr);
-                    listView1.Items.Add(lv1);
-                    try { txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) + Convert.ToInt16(txt_ukupno1.Text)).ToString(); }
-                    catch (Exception ex) { txt_ukupno.Text = ""; }
-                    var novi = new Narudzbina
+                    if (!string.IsNullOrEmpty(arr[0]) && !string.IsNullOrEmpty(arr[1]) && !string.IsNullOrEmpty(arr[2])
+                           && !string.IsNullOrEmpty(arr[3]))
                     {
-                        naziv = cmb_artikal.Text,
-                        cena = int.Parse(txt_cena.Text),
+                        ListViewItem lv1 = new ListViewItem(arr);
+                        listView1.Items.Add(lv1);
+                        try { txt_ukupno.Text = (Convert.ToInt16(txt_ukupno.Text) + Convert.ToInt16(txt_ukupno1.Text)).ToString(); }
+                        catch (Exception ex) { txt_ukupno.Text = ""; }
+                        var novi = new Narudzbina
+                        {
+                            naziv = cmb_artikal.Text,
+                            cena = int.Parse(txt_cena.Text),
 
-                        kolicina = int.Parse(textBox2.Text),
-                        datum = DateTime.Today
+                            kolicina = int.Parse(textBox2.Text),
+                            datum = DateTime.Today
 
 
-                    };
-                    this.unit.Narudzbinaa.AddNarudzbinas(novi);
-                    this.unit.Complete();
+                        };
+                        this.unit.Narudzbinaa.AddNarudzbinas(novi);
+                        this.unit.Complete();
 
 
-                }
-                else
-                {
-                    MessageBox.Show("Popunite sva polja.");
-                    return;
-                }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Popunite sva polja.");
+                        return;
+                    }
+            
+
             }
                        
 
@@ -155,6 +158,7 @@ namespace WindowsFormsApp1
 
             try
             {
+               
 
                 if (txt_popust.Text.Length > 0)
                 {
@@ -250,28 +254,40 @@ namespace WindowsFormsApp1
                 string nl = "\n";
                 PrintDocument p = new PrintDocument();
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
-                {  e1.Graphics.DrawString(" "+ r +"\n \n \n"+"\t"+nl+nl, new Font("Times New Roman", 12), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
-                  
-                     e1.Graphics.DrawString(" \t" +na+ "\t" + "\t"+c+"\t"+"\t"+kol+"\t"+"\t"+uk+"\t"+"\n"+"\n"+nl+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
-                     e1.Graphics.DrawString("\n " + nl+nl+"\n"+"\b"+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
-                    //e1.Graphics.DrawString("-------------------------------------------------------------------- " , new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                {
+                   e1.Graphics.DrawString( "  " +u + "\n  "  + pl + "\n  " + k + nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, 0, 0));
+                    e1.Graphics.DrawString(" ____________________________________________________________________", new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 5, 0,10 ));
 
+                    // e1.Graphics.DrawString(" \t" +na+ "\t" +c+"\t"+kol+"\t"+uk+"\t"+"\n"+"\n", new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, 0,300));
+
+                       e1.Graphics.DrawString(" "+ r +" ", new Font("Times New Roman", 12), new SolidBrush(Color.Black), new RectangleF(0, 55,0,0));
+                    e1.Graphics.DrawString("\n " + nl+nl+"\n"+"\b"+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                   e1.Graphics.DrawString("\t" + na + "\t \t" + c + "\t \t" + kol + "\t \t" + uk + "\t \t" +  "\n", new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 55, 0, 0));
+
+                    
+                    var startX = 0;
+                    var startY = 35;
+                    var Offset = 0;
+                   
                     for (int i = 0; i < listView1.Items.Count; i++)
                     {
+                        int ii = 1;
+                        ii++;
                         string prvi = listView1.Items[i].SubItems[0].Text;
                         string drugi = listView1.Items[i].SubItems[1].Text;
                         string treci = listView1.Items[i].SubItems[2].Text;
                         string cetvrti = listView1.Items[i].SubItems[3].Text;
                        
-                       
-                       
-                    e1.Graphics.DrawString("                                                                                                            "+nl+nl+ "\t " + prvi  + "\t"+"\t" +drugi+ "\t"+"\t"+treci + "\t" +"\t"+ cetvrti+ "\n"+"\n"+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
-                   
                       
+                       
+                    e1.Graphics.DrawString(" "+nl+nl+ "\t " + prvi  + "\t"+"\t" +drugi+ "\t"+"\t"+treci + "\t" +"\t"+ cetvrti+ "\n"+"\n"+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), startX, startY + Offset);
 
+                        Offset = Offset + 15;
+                    
                     }
-                    e1.Graphics.DrawString("\n " +nl+ "\n", new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
-                    e1.Graphics.DrawString(nl+"  " +nl+nl+ u + "\n" +nl+ nl+pl+ "\n" + " " +nl+ k+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+
+                //    e1.Graphics.DrawString("\n " +nl+ "\n", new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                    //e1.Graphics.DrawString(nl+"  " +nl+nl+ u + "\n" +nl+ nl+pl+ "\n" + " " +nl+ k+nl, new Font("Arial Bold", 11), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
 
                 };
                 try
@@ -287,7 +303,27 @@ namespace WindowsFormsApp1
             {
                 throw new Exception("Exception Occured While Printing", ex);
             }
-        }
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                string prvi = listView1.Items[i].SubItems[0].Text;
+                string drugi = listView1.Items[i].SubItems[1].Text;
+                string treci = listView1.Items[i].SubItems[2].Text;
+                string cetvrti = listView1.Items[i].SubItems[3].Text;
+
+                var novi = new Narudzbina
+                {
+                    naziv = prvi,
+                    cena = int.Parse(drugi),
+
+                    kolicina = int.Parse(treci),
+                    datum = DateTime.Today
+
+
+                };
+                this.unit.Narudzbinaa.AddNarudzbinas(novi);
+                this.unit.Complete();
+            }
+            }
 
         private void button4_Click(object sender, EventArgs e)
         {

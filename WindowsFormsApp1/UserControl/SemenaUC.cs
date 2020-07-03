@@ -36,8 +36,9 @@ namespace WindowsFormsApp1
             comboBox1.Items.Clear();
             foreach (var tz in tipzemljista)
             {
-                comboBox1.Items.Add(tz.naziv.ToString());
+                comboBox1.Items.Add(tz.nazivZ.ToString());
             }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,8 +60,8 @@ namespace WindowsFormsApp1
                             // barKod = int.Parse(textBox3.Text), ovo je visak, barKod je autoIncrement //
 
                             datumProizvodnje = dateTimePicker2.Value,
-                            proizvodjac = comboBox2.Text,
-                            TipZemljista = comboBox1.Text
+                            oznakaProizvodjacaFK = comboBox2.Text,
+                            NazivZemljistaFK = comboBox1.Text
 
                         };
                         this.unit.Semenaa.AddSemena(novi);
@@ -123,11 +124,11 @@ namespace WindowsFormsApp1
                     Brisi = MessageBox.Show("Da li ste sigurni?", "Izbriši", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (Brisi == DialogResult.Yes)
                     {
-                        string barKod = dataGridView1.SelectedRows[0].Cells[6].Value + string.Empty;
+                        string barKod = dataGridView1.SelectedRows[0].Cells[5].Value + string.Empty;
                         var semena = this.unit.Semenaa.GetSemenaBybarKod(int.Parse(barKod));
                         this.unit.Semenaa.DeleteSemena(semena);
                         this.unit.Complete();
-                        MessageBox.Show("Izbrisali ste hemikaliju.");
+                        MessageBox.Show("Izbrisali ste atikal sa semenom.");
                     }
                 }
             }
@@ -135,6 +136,15 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Doslo je do greske, proverite unete podatke");
             }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            comboBox2.Text = "";
+            comboBox1.Text = "";
+            dateTimePicker2.Value = DateTime.Today;
         }
     }
 }

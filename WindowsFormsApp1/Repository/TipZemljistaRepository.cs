@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         public TipZemljista FindByNaziv(string naziv)
         {
-            return this.context.TipZemljistaa.Where(c => c.naziv == naziv).First();
+            return this.context.TipZemljistaa.Where(c => c.nazivZ == naziv).First();
         }
 
         public IEnumerable<TipZemljista> GetAllTipZemljistas()

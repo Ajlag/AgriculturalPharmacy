@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         public string proizvodjac { get; set; }
         public float cena { get; set; }
         public DateTime datumProizvodnje { get; set; }
-        public string TipZemljista { get; set; }
+       // public string TipZemljista { get; set; }
         public string stepenOtrovnosti { get; set; }
         public int barKod { get; set; }
         
