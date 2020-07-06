@@ -13,5 +13,6 @@ namespace WindowsFormsApp1
         Hemikalije GetHemikalijelBybarKod(int hemikalijebarKod);
         void DeleteHemikalije(Hemikalije hemikalije);
         Hemikalije FindByNaziv(string naziv);
+     
     }
 }

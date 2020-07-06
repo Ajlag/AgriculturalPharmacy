@@ -68,11 +68,18 @@ namespace WindowsFormsApp1
             radioButton5.ForeColor = System.Drawing.Color.Red;
             var hemikalije = this.unit.Hemikalijee.GetAllHemikalijes();
             cmb_artikal.Items.Clear();
-            foreach(var h in hemikalije)
+            foreach (var h in hemikalije)
             {
-                cmb_artikal.Items.Add(h.ToString());
+            //    if (h.kolicina > 0)
+            //    {
+                    cmb_artikal.Items.Add(h.ToString());
+                    //h.kolicina = h.kolicina- int.Parse(textBox2.Text);
+                   // h.kolicina--;
+                //}
+                //else
+                //    MessageBox.Show("Artikal nemamo na stanju");
             }
-          
+
         }
 
         private void cmb_artikal_SelectedIndexChanged(object sender, EventArgs e)
@@ -233,6 +240,10 @@ namespace WindowsFormsApp1
             {
                 cmb_artikal.Items.Add(vdj.ToString());
             }
+
+
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -240,7 +251,19 @@ namespace WindowsFormsApp1
 
             try
             {
-               double ukupno = double.Parse(txt_neto.Text);
+
+                //var hemikalije = this.unit.Hemikalijee.GetAllHemikalijes();
+                //foreach (var h in hemikalije)
+                //{
+                //    if (h.kolicina > 0)
+                //    {
+                //        cmb_artikal.Items.Add(h.ToString());
+                //        h.kolicina = h.kolicina - int.Parse(textBox2.Text);  
+                //        }
+                //    else
+                //        MessageBox.Show("Artikal nemamo na stanju");
+                //}
+                double ukupno = double.Parse(txt_neto.Text);
                int placeno = int.Parse(txt_placeno.Text);
                 double kusur = double.Parse(txt_balans.Text);
                 string r = "Račun :" ;

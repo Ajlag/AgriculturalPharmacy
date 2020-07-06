@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
         public DateTime datumProizvodnje { get; set; }
        // public string TipZemljista { get; set; }
         public string stepenOtrovnosti { get; set; }
+        //public int kolicina { get; set; }
         public int barKod { get; set; }
         
 

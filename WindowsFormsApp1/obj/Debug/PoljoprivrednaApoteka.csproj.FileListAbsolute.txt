@@ -68,4 +68,5 @@ C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\Polj
 C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Aleksandar\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.Aco.resources
-C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.DodajKolicinu.resources
+C:\Users\Ajla\Desktop\AgriculturalPharmacy\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Migrations.ZakomentarisiKolicinu.resources

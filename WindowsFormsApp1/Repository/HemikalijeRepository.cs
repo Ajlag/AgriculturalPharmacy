@@ -37,5 +37,6 @@ namespace WindowsFormsApp1
         {
             return this.context.Hemikalijee.Find(hemikalijebarKod);
         }
+       
     }
 }
