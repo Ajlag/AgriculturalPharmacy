@@ -9,12 +9,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WindowsFormsApp1</RootNamespace>
     <AssemblyName>WindowsFormsApp1</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -84,13 +85,9 @@
     <Compile Include="Data\PrirodnaDjubriva.cs" />
     <Compile Include="Data\Hemikalije.cs" />
     <Compile Include="Data\PomocniArtikal.cs" />
-    <Compile Include="Migrations\202007061404497_DodajKolicinu.cs" />
-    <Compile Include="Migrations\202007061404497_DodajKolicinu.designer.cs">
-      <DependentUpon>202007061404497_DodajKolicinu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007061637415_ZakomentarisiKolicinu.cs" />
-    <Compile Include="Migrations\202007061637415_ZakomentarisiKolicinu.designer.cs">
-      <DependentUpon>202007061637415_ZakomentarisiKolicinu.cs</DependentUpon>
+    <Compile Include="Migrations\202201121800578_novaBaza.cs" />
+    <Compile Include="Migrations\202201121800578_novaBaza.designer.cs">
+      <DependentUpon>202201121800578_novaBaza.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -174,11 +171,8 @@
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007061404497_DodajKolicinu.resx">
-      <DependentUpon>202007061404497_DodajKolicinu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007061637415_ZakomentarisiKolicinu.resx">
-      <DependentUpon>202007061637415_ZakomentarisiKolicinu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202201121800578_novaBaza.resx">
+      <DependentUpon>202201121800578_novaBaza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl\Racun.resx">
       <DependentUpon>Racun.cs</DependentUpon>

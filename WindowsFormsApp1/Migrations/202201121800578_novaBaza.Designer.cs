@@ -7,13 +7,13 @@ namespace WindowsFormsApp1.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class DodajKolicinu : IMigrationMetadata
+    public sealed partial class novaBaza : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DodajKolicinu));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(novaBaza));
         
         string IMigrationMetadata.Id
         {
-            get { return "202007061404497_DodajKolicinu"; }
+            get { return "202201121800578_novaBaza"; }
         }
         
         string IMigrationMetadata.Source
